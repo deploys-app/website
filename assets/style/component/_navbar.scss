@@ -1,0 +1,131 @@
+.#{$prefix}navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: var(--navbar-height);
+	width: 100%;
+
+	padding: 0;
+	background-color: transparent;
+	transition: all 0.2s linear;
+	z-index: 20;
+
+	&.navbar-fixed {
+		background-color: white;
+		box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.06);
+
+		.navbar-menu-container .navbar-menu {
+			color: var(--color-dark-primary);
+		}
+
+		.navbar-toggle {
+			color: var(--color-dark-primary);
+		}
+
+		.navbar-toggle:hover .navbar-toggle-container {
+			background: rgba(0, 0, 0, 0.062);
+		}
+	}
+
+	.navbar-menu-container {
+		opacity: 0;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		margin-top: calc(var(--navbar-height) + .5rem);
+		padding: 0 1rem;
+
+		visibility: hidden;
+		pointer-events: none;
+
+		transform: translate3d(0, -20px, 0);
+
+		&.active {
+			transition: all var(--timing-normal) ease;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+			transform: translate3d(0, 0, 0);
+		}
+
+		.navbar-menus {
+			padding: .75rem 1rem .5rem 1rem;
+			width: 100%;
+			background: white;
+			color: var(--color-dark-primary);
+
+			border-radius: 4px;
+			border: 1px solid rgb(240, 240, 240);
+			box-shadow: 0px 50px 100px 0px rgba(64, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+		}
+
+		.navbar-menu {
+			padding: .5rem 0;
+			font-size: var(--font-size-600);
+			text-align: center;
+		}
+
+		@include mq('md') {
+			position: relative;
+			opacity: 1;
+			visibility: visible;
+			display: inline-flex;
+			pointer-events: all;
+			margin: 0;
+			transform: translate3d(0, 0, 0);
+			width: auto;
+
+			.navbar-menus {
+				display: flex;
+				align-items: center;
+				padding: 0;
+				border: none;
+				box-shadow: none;
+				background-color: transparent;
+			}
+
+			.navbar-menu {
+				color: var(--color-light-primary);
+				margin: 0 .75rem;
+			}
+		}
+	}
+
+	.navbar-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: var(--navbar-height);
+		height: var(--navbar-height);
+
+		cursor: pointer;
+		color: var(--color-light-primary);
+		user-select: none;
+
+		margin-right: -.75rem;
+
+		.navbar-toggle-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: calc(var(--navbar-height) - 1.25rem);
+			height: calc(var(--navbar-height) - 1.25rem);
+			background: rgba(255, 255, 255, 0);
+			border-radius: 999px;
+			transition: background var(--timing-normal) ease;
+		}
+
+		&:hover {
+			.navbar-toggle-container {
+				background: rgba(255, 255, 255, 0.11);
+			}
+		}
+
+		@include mq('md') {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+@import 'function/breakpoint';
+
+@import 'theme';
+@import 'reset';
+
+@import 'atomic/all';
+@import 'utility/all';
+@import 'layout/all';
+@import 'component/all';
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--navbar-height: 4rem;
+	--header-hight: 110px;
+}
+
+.content-wrap {
+	padding-top: var(--header-hight);
+}

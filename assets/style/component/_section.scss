@@ -1,0 +1,31 @@
+section.section {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.section-hero {
+	min-height: 650px;
+	height: 100vh;
+	background-color: var(--color-neutral-700);
+	padding-top: 100px;
+
+	@include mqmw('md') {
+		text-align: center;
+		padding: 150px 0 30px;
+		height: auto;
+	}
+}
+
+.section-feature {
+	padding: 120px 0;
+}
+
+.section-plan {
+	padding: 120px 0;
+}
+
+.section-cta {
+	background-color: hsl(353, 84%, 70%);
+	padding: 50px 0;
+}
