@@ -1,3 +1,24 @@
+<script context="module">
+    export async function load ({ fetch }) {
+        const resp = await fetch('https://api.deploys.app/billing.skus')
+        const res = await resp.json()
+        return {
+            props: {
+                price: res.result
+            }
+        }
+    }
+</script>
+
+<script>
+    export let price = {}
+    const perMonth = 60 * 60 * 24 * 30
+
+    function format (v, d) {
+        return v.toLocaleString(undefined, { maximumFractionDigits: d })
+    }
+</script>
+
 <section class="section section-hero">
 	<div class="lo-container">
 		<div class="lo-12 lo-6-md _gg-32px">
@@ -9,7 +30,7 @@
 				<a class="moon-button _als-fst-lg _als-ct" href="/#price">Get your plans</a>
 			</div>
 			<div class="_mgt-16px">
-				<img class="_w-100pct" src="{{ (resources.Get "images/database.svg" | resources.Fingerprint).RelPermalink }}" alt="Server Architecture">
+				<img class="_w-100pct" src="images/database.svg" alt="Server Architecture">
 			</div>
 		</div>
 	</div>
@@ -71,7 +92,7 @@
 	<div class="lo-container">
 		<div class="lo-12 lo-6-md _gg-24px">
 			<div>
-				<img class="dp-b _mgh-at _w-100pct" src="{{ (resources.Get "images/business1.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
+				<img class="dp-b _mgh-at _w-100pct" src="images/business1.png" alt="Business">
 			</div>
 			<div>
 				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _mgbt-16px">
@@ -137,7 +158,7 @@
 			</div>
 
 			<div class="_od-2-lg _od-1">
-				<img class="dp-b _mgh-at _w-100pct" src="{{ (resources.Get "images/business2.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
+				<img class="dp-b _mgh-at _w-100pct" src="images/business2.png" alt="Business">
 			</div>
 		</div>
 	</div>
@@ -146,7 +167,7 @@
 	<div class="lo-container">
 		<div class="lo-12 lo-6-md _gg-24px">
 			<div>
-				<img class="dp-b _mgh-at _w-100pct" src="{{ (resources.Get "images/action_img.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
+				<img class="dp-b _mgh-at _w-100pct" src="images/action_img.png" alt="Business">
 			</div>
 			<div class="_dp-f _fdrt-cl _jtfct-ct">
 				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-white _mgbt-16px">
@@ -174,8 +195,7 @@
 			</p>
 		</div>
 		<div>
-			{{ $price := (getJSON "https://api.deploys.app/billing.skus").result }}
-			{{ $perMonth := mul (mul 3600 24) 30 }}
+			
 			<div class="moon-table-container">
 				<table class="moon-table">
 					<thead>
@@ -190,18 +210,10 @@
 						<td class="_tal-ct _cl-neutral-400"><strong>vCPUs</strong></td>
 						<td class="_tal-ct _cl-neutral-400">1 vCPU</td>
 						<td class="_tal-ct _cl-neutral-400">
-							<div><strong>฿{{ mul $price.cpuUsage $perMonth | lang.FormatNumberCustom 2}}/mo</strong></div>
-							<div>฿{{ $price.cpuUsage | lang.FormatNumberCustom 10}}/s</div>
+							<div><strong>฿{format(price.cpuUsage * perMonth, 2)}/mo</strong></div>
+							<div>฿{format(price.cpuUsage, 10)}/s</div>
 						</td>
 					</tr>
-					{{/*							<tr>*/}}
-						{{/*								<td class="_tal-ct _cl-neutral-400"><strong>Allocated vCPUs</strong></td>*/}}
-						{{/*								<td class="_tal-ct _cl-neutral-400">1 vCPU</td>*/}}
-						{{/*								<td class="_tal-ct _cl-neutral-400">*/}}
-							{{/*									<div><strong>฿{{ mul $price.cpu perMonth | lang.FormatNumberCustom 2}}/mo</strong></div>*/}}
-							{{/*									<div>฿{{ $price.cpu | lang.FormatNumberCustom 10}}/s</div>*/}}
-							{{/*								</td>*/}}
-						{{/*							</tr>*/}}
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>Memory</strong></td>
 						<td class="_tal-ct _cl-neutral-400">Shared</td>
@@ -213,31 +225,31 @@
 						<td class="_tal-ct _cl-neutral-400"><strong>Allocated Memory</strong></td>
 						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
 						<td class="_tal-ct _cl-neutral-400">
-							<div><strong>฿{{ mul $price.memory $perMonth | lang.FormatNumberCustom 2}}/mo</strong></div>
-							<div>฿{{ $price.memory | lang.FormatNumberCustom 10}}/s</div>
+							<div><strong>฿{format(price.memory * perMonth, 2)}/mo</strong></div>
+							<div>฿{format(price.memory, 10)}/s</div>
 						</td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>SSD Disk</strong></td>
 						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
 						<td class="_tal-ct _cl-neutral-400">
-							<div><strong>฿{{ mul $price.disk $perMonth | lang.FormatNumberCustom 2}}/mo</strong></div>
-							<div>฿{{ $price.disk | lang.FormatNumberCustom 10}}/s</div>
+							<div><strong>฿{format(price.disk * perMonth, 2)}/mo</strong></div>
+							<div>฿{format(price.disk, 10)}/s</div>
 						</td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>Replica</strong></td>
 						<td class="_tal-ct _cl-neutral-400">1</td>
 						<td class="_tal-ct _cl-neutral-400">
-							<div><strong>฿{{ mul $price.replica $perMonth | lang.FormatNumberCustom 2}}/mo</strong></div>
-							<div>฿{{ $price.replica | lang.FormatNumberCustom 10}}/s</div>
+							<div><strong>฿{format(price.replica * perMonth, 2)}/mo</strong></div>
+							<div>฿{format(price.replica, 10)}/s</div>
 						</td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>Egress Bandwidth</strong></td>
 						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
 						<td class="_tal-ct _cl-neutral-400">
-							<div><strong>฿{{ $price.egress | lang.FormatNumberCustom 2}}</strong></div>
+							<div><strong>฿{format(price.egress, 2)}</strong></div>
 						</td>
 					</tr>
 					</tbody>
