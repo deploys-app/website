@@ -1,6 +1,11 @@
-<section class="section _mgt-70px _mgbt-16px _cl-neutral-500">
-	<div class="lo-container _gg-16px _mgt-16px">
+<section class="section _pdt-70px _bgcl-neutral-700">
+    <div class="lo-container _gg-16px _mgt-32px _mgbt-16px">
         <h1>Privacy Policy for Customer</h1>
+    </div>
+</section>
+
+<section class="section _mgbt-16px _cl-neutral-500">
+    <div class="lo-container _gg-16px _mgt-16px">
         <p>Moon Rhythm Co., Ltd. recognizes the importance of the protection of your personal data. This Privacy Policy explains our practices regarding the collection, use or disclosure of personal data including other rights of the Data Subjects in accordance with the Personal Data Protection Laws.</p>
 
         <h3>Collection of Personal Data</h3>

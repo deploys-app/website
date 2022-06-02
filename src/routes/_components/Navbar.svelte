@@ -40,10 +40,13 @@
 					<a class="nav-link" href="/" on:click={() => active = false}>Home</a>
 				</li>
 				<li class="navbar-menu">
-					<a class="nav-link" href="#feature" on:click={() => active = false}>Features</a>
+					<a class="nav-link" href="/#feature" on:click={() => active = false}>Features</a>
 				</li>
 				<li class="navbar-menu">
-					<a class="nav-link" href="#price" on:click={() => active = false}>Prices</a>
+					<a class="nav-link" href="/#price" on:click={() => active = false}>Prices</a>
+				</li>
+				<li class="navbar-menu">
+					<a class="nav-link" href="/privacy-policy">Privacy</a>
 				</li>
 				<li class="navbar-menu" on:click={() => active = false}>
 					<div class="_dp-f _jtfct-ct">
