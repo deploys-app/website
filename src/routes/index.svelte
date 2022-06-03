@@ -48,14 +48,14 @@
 					<i class="fal fa-server"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Web Service</h3>
-				<p class="_fw-500 _cl-dark-secondary">Running service that expose HTTP(S) to the internet.</p>
+				<p class="_fw-500 _cl-dark-secondary">Running service that expose HTTPS to the internet.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fal fa-database"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">TCP Service</h3>
-				<p class="_fw-500 _cl-dark-secondary">Running service that expose TCP to the internet.</p>
+				<p class="_fw-500 _cl-dark-secondary">Running internal TCP service.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
@@ -80,10 +80,10 @@
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
-					<i class="fal fa-lock"></i>
+					<i class="fa-brands fa-cloudflare"></i>
 				</div>
-				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">HTTPS</h3>
-				<p class="_fw-500 _cl-dark-secondary">Free and automated Let's Encrypt for your web service</p>
+				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">DDoS Protection</h3>
+				<p class="_fw-500 _cl-dark-secondary">Bring your own Cloudflare zone or use built-in Cloudflare service.</p>
 			</div>
 		</div>
 	</div>
@@ -195,7 +195,7 @@
 			</p>
 		</div>
 		<div>
-			
+
 			<div class="moon-table-container">
 				<table class="moon-table">
 					<thead>
