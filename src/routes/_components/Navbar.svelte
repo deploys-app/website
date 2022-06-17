@@ -31,7 +31,7 @@
 		</a>
 		<div class="navbar-toggle" on:click={() => active = !active}>
 			<div class="navbar-toggle-container">
-				<i class="far fa-bars _fs-700"></i>
+				<i class="fa-regular fa-bars _fs-700"></i>
 			</div>
 		</div>
 		<div class="navbar-menu-container" class:active={active}>

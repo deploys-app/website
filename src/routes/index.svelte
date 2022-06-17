@@ -45,35 +45,35 @@
 		<div class="lo-12 lo-6-md lo-4-lg _gg-16px">
 			<div class="fancy-box">
 				<div class="fancy-icon">
-					<i class="fal fa-server"></i>
+					<i class="fa-light fa-server"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Web Service</h3>
 				<p class="_fw-500 _cl-dark-secondary">Running service that expose HTTPS to the internet.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
-					<i class="fal fa-database"></i>
+					<i class="fa-light fa-database"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">TCP Service</h3>
 				<p class="_fw-500 _cl-dark-secondary">Running internal TCP service.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
-					<i class="fal fa-microchip"></i>
+					<i class="fa-light fa-microchip"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Worker</h3>
 				<p class="_fw-500 _cl-dark-secondary">Running background worker service.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
-					<i class="fal fa-suitcase"></i>
+					<i class="fa-light fa-suitcase"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Cron Job</h3>
 				<p class="_fw-500 _cl-dark-secondary">Running service with start scheduler.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
-					<i class="fal fa-disc-drive"></i>
+					<i class="fa-light fa-disc-drive"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Stateful and Stateless</h3>
 				<p class="_fw-500 _cl-dark-secondary">Support both stateless and stateful service with SSD.</p>
@@ -105,7 +105,7 @@
 				</p>
 				<div class="fancy-box-2 _mgbt-24px">
 					<div class="fancy-icon">
-						<i class="far fa-coins"></i>
+						<i class="fa-regular fa-coins"></i>
 					</div>
 					<div class="fancy-body">
 						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Pay as you go</h4>
@@ -114,7 +114,7 @@
 				</div>
 				<div class="fancy-box-2 _mgbt-24px">
 					<div class="fancy-icon">
-						<i class="fas fa-repeat-alt"></i>
+						<i class="fa-regular fa-repeat-alt"></i>
 					</div>
 					<div class="fancy-body">
 						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Move faster</h4>
@@ -139,7 +139,7 @@
 				</p>
 				<div class="fancy-box-2 _mgbt-24px">
 					<div class="fancy-icon">
-						<i class="fal fa-tags"></i>
+						<i class="fa-light fa-tags"></i>
 					</div>
 					<div class="fancy-body">
 						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Allocated resources</h4>
@@ -148,7 +148,7 @@
 				</div>
 				<div class="fancy-box-2 _mgbt-24px">
 					<div class="fancy-icon">
-						<i class="fal fa-server"></i>
+						<i class="fa-light fa-server"></i>
 					</div>
 					<div class="fancy-body">
 						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Bring your own Kubernetes</h4>
