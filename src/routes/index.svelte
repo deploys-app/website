@@ -207,8 +207,8 @@
 					</thead>
 					<tbody>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>vCPUs</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1 vCPU</td>
+						<td class="_tal-ct _cl-neutral-400"><strong>CPU</strong></td>
+						<td class="_tal-ct _cl-neutral-400">1s CPU time</td>
 						<td class="_tal-ct _cl-neutral-400">
 							<div><strong>฿{format(price.cpuUsage * perMonth, 2)}/mo</strong></div>
 							<div>฿{format(price.cpuUsage, 10)}/s</div>
