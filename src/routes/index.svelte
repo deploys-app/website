@@ -1,22 +1,22 @@
 <script context="module">
-    export async function load ({ fetch }) {
-        const resp = await fetch('https://api.deploys.app/billing.skus')
-        const res = await resp.json()
-        return {
-            props: {
-                price: res.result
-            }
-        }
-    }
+	export async function load ({ fetch }) {
+		const resp = await fetch('https://api.deploys.app/billing.skus')
+		const res = await resp.json()
+		return {
+			props: {
+				price: res.result
+			}
+		}
+	}
 </script>
 
 <script>
-    export let price = {}
-    const perMonth = 60 * 60 * 24 * 30
+	export let price = {}
+	const perMonth = 60 * 60 * 24 * 30
 
-    function format (v, d) {
-        return v.toLocaleString(undefined, { maximumFractionDigits: d })
-    }
+	function format (v, d) {
+		return v.toLocaleString(undefined, { maximumFractionDigits: d })
+	}
 </script>
 
 <section class="section section-hero">

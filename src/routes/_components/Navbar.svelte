@@ -1,6 +1,4 @@
 <script>
-	import { onMount } from 'svelte'
-
 	let active = false
 	let fixed = false
 	let scrolling = false
