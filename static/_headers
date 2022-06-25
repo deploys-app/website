@@ -3,5 +3,3 @@ https://:project.pages.dev/*
 /*
   strict-transport-security: max-age=31536000; includeSubDomains; preload
   x-frame-options: DENY
-/
-  link: </images/business1.png>; rel=preload; as=image
