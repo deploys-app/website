@@ -83,7 +83,7 @@
 					<i class="fa-brands fa-cloudflare"></i>
 				</div>
 				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">DDoS Protection</h3>
-				<p class="_fw-500 _cl-dark-secondary">Bring your own Cloudflare zone or use built-in Cloudflare service.</p>
+				<p class="_fw-500 _cl-dark-secondary">All domains protected by Cloudflare Enterprise.</p>
 			</div>
 		</div>
 	</div>
