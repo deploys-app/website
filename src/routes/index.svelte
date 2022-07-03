@@ -203,6 +203,7 @@
 						<th class="_tal-ct">RESOURCE</th>
 						<th class="_tal-ct">VALUE</th>
 						<th class="_tal-ct">PRICE</th>
+						<th class="_tal-ct">FREE TIER<br>(Daily)</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -213,6 +214,7 @@
 							<div><strong>฿{format(price.cpuUsage * perMonth, 2)}/mo</strong></div>
 							<div>฿{format(price.cpuUsage, 10)}/s</div>
 						</td>
+						<td class="_tal-ct _cl-neutral-400"><strong>{format(8640)} s</strong></td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>Memory</strong></td>
@@ -220,6 +222,7 @@
 						<td class="_tal-ct _cl-neutral-400">
 							<div><strong>Free</strong></div>
 						</td>
+						<td class="_tal-ct _cl-neutral-400">-</td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>Allocated Memory</strong></td>
@@ -228,6 +231,7 @@
 							<div><strong>฿{format(price.memory * perMonth, 2)}/mo</strong></div>
 							<div>฿{format(price.memory, 10)}/s</div>
 						</td>
+						<td class="_tal-ct _cl-neutral-400">-</td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>SSD Disk</strong></td>
@@ -236,6 +240,7 @@
 							<div><strong>฿{format(price.disk * perMonth, 2)}/mo</strong></div>
 							<div>฿{format(price.disk, 10)}/s</div>
 						</td>
+						<td class="_tal-ct _cl-neutral-400">-</td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>Replica</strong></td>
@@ -244,12 +249,17 @@
 							<div><strong>฿{format(price.replica * perMonth, 2)}/mo</strong></div>
 							<div>฿{format(price.replica, 10)}/s</div>
 						</td>
+						<td class="_tal-ct _cl-neutral-400"><strong>{format(216000)} s</strong></td>
 					</tr>
 					<tr>
 						<td class="_tal-ct _cl-neutral-400"><strong>Egress Bandwidth</strong></td>
 						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
 						<td class="_tal-ct _cl-neutral-400">
 							<div><strong>฿{format(price.egress, 2)}</strong></div>
+						</td>
+						<td class="_tal-ct _cl-neutral-400">
+							<div><strong>{format(1)} GiB</strong> <span class="_fs-100">Uncached</span></div>
+							<div><strong>{format(1)} GiB</strong> <span class="_fs-100">Cached</span></div>
 						</td>
 					</tr>
 					</tbody>
