@@ -137,9 +137,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.375":
-  version: 1.0.0-next.375
-  resolution: "@sveltejs/kit@npm:1.0.0-next.375"
+"@sveltejs/kit@npm:^1.0.0-next.377":
+  version: 1.0.0-next.377
+  resolution: "@sveltejs/kit@npm:1.0.0-next.377"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.1
     chokidar: ^3.5.3
@@ -149,7 +149,7 @@ __metadata:
     vite: ^3.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: a00e3c548e2ed340188be248f6cbfab4c14a36114cec143bc5dcc6f8384cf1b05d1f7004b31535c25b4a41522106f941f19ef9c9d27bcd960fdda91d00d70cb4
+  checksum: 9bc3d0fd860b58c86b4b140a323db8947bc8f6fdf09546030f2c045d3d90741c11aa7683801f402d03b9cac0a4585ecb36caca9e082e69eb6a15e6b30111cd5b
   languageName: node
   linkType: hard
 
@@ -2502,7 +2502,7 @@ __metadata:
   resolution: "website@workspace:."
   dependencies:
     "@sveltejs/adapter-static": ^1.0.0-next.36
-    "@sveltejs/kit": ^1.0.0-next.375
+    "@sveltejs/kit": ^1.0.0-next.377
     eslint: ^8.19.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
