@@ -128,18 +128,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^1.0.0-next.37":
-  version: 1.0.0-next.37
-  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.37"
+"@sveltejs/adapter-static@npm:^1.0.0-next.38":
+  version: 1.0.0-next.38
+  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.38"
   dependencies:
     tiny-glob: ^0.2.9
-  checksum: 5f3d9efae32dc252a6ef97d742a8e1cd24ea09ec54806cdf14efe7d1a9fafc496771589eea9cc99da90fa0524a95ae4dadf7fee2f6dcaa7d5d0ff093bcd1ab7c
+  checksum: afbf73ff30cb6d5eabddfe1c911ab4dcefda965d799510deb11d3d713737383a8764fddf426d564f30fc2ece87220a7cf5523b4072e16f9d96d5af0d86d61862
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.377":
-  version: 1.0.0-next.377
-  resolution: "@sveltejs/kit@npm:1.0.0-next.377"
+"@sveltejs/kit@npm:^1.0.0-next.384":
+  version: 1.0.0-next.384
+  resolution: "@sveltejs/kit@npm:1.0.0-next.384"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.1
     chokidar: ^3.5.3
@@ -149,7 +149,7 @@ __metadata:
     vite: ^3.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 9bc3d0fd860b58c86b4b140a323db8947bc8f6fdf09546030f2c045d3d90741c11aa7683801f402d03b9cac0a4585ecb36caca9e082e69eb6a15e6b30111cd5b
+  checksum: dc9b5d935b46334c0b43117f97fb1845685e231e99e97a00a7b6a5028a05f1845b21678559eeeba6f0976e5f06a5211b768011c9312149e5803b2082085bf621
   languageName: node
   linkType: hard
 
@@ -2465,9 +2465,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "vite@npm:3.0.1"
+"vite@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "vite@npm:3.0.2"
   dependencies:
     esbuild: ^0.14.47
     fsevents: ~2.3.2
@@ -2493,7 +2493,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 33660b4b116e0c0b730f493f8ab7a3e5fff6d7b7728f25354ab13b32fec587f231748448655334980039951abaac3b6d221a6844c2765d4fe8c0601d7f8420b9
+  checksum: 10aebec0df89bbdba9a0c72dc35ec3ec5be0b50216fc7a1e04b5da11de244033b1cbe83a95b1af67be176fc09e05698387d3cc9dcbee64e009dd43811f8717e9
   languageName: node
   linkType: hard
 
@@ -2501,8 +2501,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "website@workspace:."
   dependencies:
-    "@sveltejs/adapter-static": ^1.0.0-next.37
-    "@sveltejs/kit": ^1.0.0-next.377
+    "@sveltejs/adapter-static": ^1.0.0-next.38
+    "@sveltejs/kit": ^1.0.0-next.384
     eslint: ^8.20.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
@@ -2513,7 +2513,7 @@ __metadata:
     svelte-check: ^2.8.0
     svelte-preprocess: ^4.10.7
     typescript: ~4.7.4
-    vite: ^3.0.1
+    vite: ^3.0.2
   languageName: unknown
   linkType: soft
 
