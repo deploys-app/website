@@ -1,17 +1,6 @@
-<script context="module">
-	export async function load ({ fetch }) {
-		const resp = await fetch('https://api.deploys.app/billing.skus')
-		const res = await resp.json()
-		return {
-			props: {
-				price: res.result
-			}
-		}
-	}
-</script>
-
 <script>
-	export let price = {}
+	export let data
+	$: ({ price } = data)
 	const perMonth = 60 * 60 * 24 * 30
 
 	function format (v, d) {
