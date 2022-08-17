@@ -149,9 +149,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.408":
-  version: 1.0.0-next.408
-  resolution: "@sveltejs/kit@npm:1.0.0-next.408"
+"@sveltejs/kit@npm:^1.0.0-next.415":
+  version: 1.0.0-next.415
+  resolution: "@sveltejs/kit@npm:1.0.0-next.415"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.1
     chokidar: ^3.5.3
@@ -171,7 +171,7 @@ __metadata:
     vite: ^3.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 15bd2c0b7e84da007c7639e563084e39df6a3dd8cc0c51dce56e13b0fb89f12970cd2f2e763feb6a05474106eee49cfdfa8a9e3f8851abed70fc007463edb0f5
+  checksum: 4e87120a46c3207bd3d83d501ffd94b1a082e7e2d66991f3e03cbad05bc36b1bef45a8e45fe48cc28a143f46d5087498583c0230c6598dd6cffd1731e5d4aef2
   languageName: node
   linkType: hard
 
@@ -2712,9 +2712,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.0.7":
-  version: 3.0.7
-  resolution: "vite@npm:3.0.7"
+"vite@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "vite@npm:3.0.8"
   dependencies:
     esbuild: ^0.14.47
     fsevents: ~2.3.2
@@ -2740,7 +2740,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 3cdcb68e16433b9addee61c117c379692e4d12d44ee7011da99ed9516b8c37ce76f1bb1728eab0e3a28957c9d2dc839024e1607c2ad03f38089e3be55d7dd456
+  checksum: ec3f57d52f2bf28f2f89898053c2156f025a108a95e9308ce6580f43d8fdaae866f7988afa8207a8c8509069d3a0b50ee79b9a8050590a825f4b7771646c2755
   languageName: node
   linkType: hard
 
@@ -2756,7 +2756,7 @@ __metadata:
   resolution: "website@workspace:."
   dependencies:
     "@sveltejs/adapter-static": ^1.0.0-next.39
-    "@sveltejs/kit": ^1.0.0-next.408
+    "@sveltejs/kit": ^1.0.0-next.415
     eslint: ^8.22.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
@@ -2767,7 +2767,7 @@ __metadata:
     svelte-check: ^2.8.0
     svelte-preprocess: ^4.10.7
     typescript: ~4.7.4
-    vite: ^3.0.7
+    vite: ^3.0.8
   languageName: unknown
   linkType: soft
 
