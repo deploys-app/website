@@ -10,7 +10,7 @@
 
 <section class="section section-hero">
 	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-32px">
+		<div class="lo-12 lo-6:md _gg-32px">
 			<div class="_dp-f _fdrt-cl _jtfct-ct">
 				<h1 class="_fw-700 _fs-1300-lg _fs-1100 _cl-white _mgbt-16px">
 					Deploy and run containers!
@@ -31,7 +31,7 @@
 			<br>
 			Built for business.
 		</h2>
-		<div class="lo-12 lo-6-md lo-4-lg _gg-16px">
+		<div class="lo-12 lo-6:md lo-4-lg _gg-16px">
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-light fa-server"></i>
@@ -79,7 +79,7 @@
 </section>
 <section class="section _pdv-48px _pdv-70px-lg">
 	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-24px">
+		<div class="lo-12 lo-6:md _gg-24px">
 			<div>
 				<img class="dp-b _mgh-at _w-100pct" src="/images/business1.png" alt="Business">
 			</div>
@@ -116,7 +116,7 @@
 </section>
 <section class="section _pdv-48px _pdv-70px-lg">
 	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-24px">
+		<div class="lo-12 lo-6:md _gg-24px">
 			<div class="_od-2 _od-1-lg">
 				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _mgbt-16px">
 					Solutions for Your big
@@ -154,7 +154,7 @@
 </section>
 <section class="section _pdv-70px _bgcl-neutral-700">
 	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-24px">
+		<div class="lo-12 lo-6:md _gg-24px">
 			<div>
 				<img class="dp-b _mgh-at _w-100pct" src="/images/action_img.png" alt="Business">
 			</div>

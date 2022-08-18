@@ -28,5 +28,9 @@
 		"vite": "^3.0.8"
 	},
 	"type": "module",
-	"packageManager": "yarn@3.2.1"
+	"packageManager": "yarn@3.2.1",
+	"dependencies": {
+		"@nomimono/nomimono-css": "^0.4.2",
+		"@nomimono/nomimono-theme": "^0.4.2"
+	}
 }

@@ -105,6 +105,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nomimono/nomimono-css@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "@nomimono/nomimono-css@npm:0.4.2"
+  checksum: d539858c77bdb662efc18eaa07a43f92c20800a426137313d8b8a181ea2f464c705af375863e86a7550d958ea60846aea6708b331001142e6c9332fac2893628
+  languageName: node
+  linkType: hard
+
+"@nomimono/nomimono-theme@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "@nomimono/nomimono-theme@npm:0.4.2"
+  checksum: f7984208bd5a5c29c03d2872032610f8d6f2cc70c5fc45a12fa9ad3eaf7f0441d66cedcab5255b26222f1d51fa33e864c9ee3cf812c5c5b24ab8853b20c64a48
+  languageName: node
+  linkType: hard
+
 "@npmcli/fs@npm:^2.1.0":
   version: 2.1.0
   resolution: "@npmcli/fs@npm:2.1.0"
@@ -2754,6 +2768,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "website@workspace:."
   dependencies:
+    "@nomimono/nomimono-css": ^0.4.2
+    "@nomimono/nomimono-theme": ^0.4.2
     "@sveltejs/adapter-static": ^1.0.0-next.39
     "@sveltejs/kit": ^1.0.0-next.420
     eslint: ^8.22.0
