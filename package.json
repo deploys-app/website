@@ -14,7 +14,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.39",
-		"@sveltejs/kit": "^1.0.0-next.415",
+		"@sveltejs/kit": "^1.0.0-next.420",
 		"eslint": "^8.22.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
@@ -22,7 +22,7 @@
 		"prettier-plugin-svelte": "^2.7.0",
 		"sass": "^1.54.4",
 		"svelte": "^3.49.0",
-		"svelte-check": "^2.8.0",
+		"svelte-check": "^2.8.1",
 		"svelte-preprocess": "^4.10.7",
 		"typescript": "~4.7.4",
 		"vite": "^3.0.8"
