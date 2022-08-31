@@ -7,12 +7,7 @@ const config = {
 		sass: true
 	}),
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			enabled: true,
-			default: true,
-			crawl: true
-		}
+		adapter: adapter()
 	}
 }
 
