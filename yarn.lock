@@ -163,9 +163,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.472":
-  version: 1.0.0-next.472
-  resolution: "@sveltejs/kit@npm:1.0.0-next.472"
+"@sveltejs/kit@npm:^1.0.0-next.477":
+  version: 1.0.0-next.477
+  resolution: "@sveltejs/kit@npm:1.0.0-next.477"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.0.5
     cookie: ^0.5.0
@@ -184,7 +184,7 @@ __metadata:
     vite: ^3.1.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 60147cbbf0efa61799db0c316cf2c3dd70f1558394d5ba63b655d225e92818bb72edb0bd0b31645096e84a3566bc191747f73762db4daa768454fea0184e9cab
+  checksum: c757c7691844e17c7393183bf974764cbc83aeaa44348d371b8bd58e3d3932eae15b7165fdfac702ceccb664fcbed2d410f4e3e7aa531a0430f3f134ef45efaf
   languageName: node
   linkType: hard
 
@@ -2227,16 +2227,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.54.8":
-  version: 1.54.8
-  resolution: "sass@npm:1.54.8"
+"sass@npm:^1.54.9":
+  version: 1.54.9
+  resolution: "sass@npm:1.54.9"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 72893b2dc6284a6194fc560a578da57ab0082130ee558a96bcb9893cc7b517b836dac6e17b3a52b040975e70b4cdefb1268907df955a706b5bf70e3860afcfba
+  checksum: 90182b566072b48e2263c5a87229ab85164e13b71b24847ba76a8e68eb952cb69a7dcef815f4ccc0189dd2d0c254311acff6972166603338d33bbc96f6d500c6
   languageName: node
   linkType: hard
 
@@ -2754,13 +2754,13 @@ __metadata:
   resolution: "website@workspace:."
   dependencies:
     "@sveltejs/adapter-static": ^1.0.0-next.42
-    "@sveltejs/kit": ^1.0.0-next.472
+    "@sveltejs/kit": ^1.0.0-next.477
     eslint: ^8.23.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
     prettier: ^2.7.1
     prettier-plugin-svelte: ^2.7.0
-    sass: ^1.54.8
+    sass: ^1.54.9
     svelte: ^3.50.0
     svelte-check: ^2.9.0
     svelte-preprocess: ^4.10.7
