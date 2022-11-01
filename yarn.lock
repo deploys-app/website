@@ -146,26 +146,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^1.0.0-next.46":
-  version: 1.0.0-next.46
-  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.46"
-  checksum: eeda5d15003749ad16da9ad815a68943a6dd2f5474454b5d97d1e6fc69b0f196eaec7a2a69b4e8d289651376019d6ed74a4a6daa15ffb473f652b23f9015711f
+"@sveltejs/adapter-static@npm:^1.0.0-next.47":
+  version: 1.0.0-next.47
+  resolution: "@sveltejs/adapter-static@npm:1.0.0-next.47"
+  checksum: d56902e8bc92a28e16e6afa23cebac1a1cfb94b9f386268f7569884ab2dea6ff6588c537a58ab5ec59d476dab132104e0afa63655cf79289602282586cb0237c
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.526":
-  version: 1.0.0-next.526
-  resolution: "@sveltejs/kit@npm:1.0.0-next.526"
+"@sveltejs/kit@npm:^1.0.0-next.531":
+  version: 1.0.0-next.531
+  resolution: "@sveltejs/kit@npm:1.0.0-next.531"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^1.1.0
     "@types/cookie": ^0.5.1
     cookie: ^0.5.0
-    devalue: ^4.0.0
-    kleur: ^4.1.4
-    magic-string: ^0.26.2
+    devalue: ^4.0.1
+    kleur: ^4.1.5
+    magic-string: ^0.26.7
     mime: ^3.0.0
     sade: ^1.8.1
-    set-cookie-parser: ^2.4.8
+    set-cookie-parser: ^2.5.1
     sirv: ^2.0.2
     tiny-glob: ^0.2.9
     undici: 5.12.0
@@ -174,7 +174,7 @@ __metadata:
     vite: ^3.1.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 7ab27981162259e1832b2391cf6d463d3021e482be53a2307ac4a1dbd5ea8c2f0c2c6204c98a3a068047fc5e7b1920edb4d08c6abc0c339a80a28f73364b60f2
+  checksum: 37f5c3b708a8b88ba5bd0f75571a00c04f201ea980d832ded29622b206c48ec3593b8b922118ae0340d4faa325d21abc3a953a869d1afbfd059d90e617b5af0b
   languageName: node
   linkType: hard
 
@@ -590,10 +590,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devalue@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "devalue@npm:4.0.0"
-  checksum: 272768ccd217a8fd9f584a9f07cd40a02a4cc36833cfa5446b1eebcf9c50df9d4c4cd598cd888ec6daee106b894612b379b8a812bdf0c5c291fcf84c2a1191ac
+"devalue@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "devalue@npm:4.0.1"
+  checksum: c7acc645e29482129a5e43e5b3896ed68939a3696cbe4d5a5e1d5e9e4a906f18253b6f4b58b7523ff1ac6c1183fb4aabd08ff83bd7cbc83efaad9a64d2a1e09b
   languageName: node
   linkType: hard
 
@@ -1482,7 +1482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kleur@npm:^4.1.4, kleur@npm:^4.1.5":
+"kleur@npm:^4.1.5":
   version: 4.1.5
   resolution: "kleur@npm:4.1.5"
   checksum: 1dc476e32741acf0b1b5b0627ffd0d722e342c1b0da14de3e8ae97821327ca08f9fb944542fb3c126d90ac5f27f9d804edbe7c585bf7d12ef495d115e0f22c12
@@ -1537,15 +1537,6 @@ __metadata:
   dependencies:
     sourcemap-codec: ^1.4.8
   checksum: 9a0e55a15c7303fc360f9572a71cffba1f61451bc92c5602b1206c9d17f492403bf96f946dfce7483e66822d6b74607262e24392e87b0ac27b786e69a40e9b1a
-  languageName: node
-  linkType: hard
-
-"magic-string@npm:^0.26.2":
-  version: 0.26.2
-  resolution: "magic-string@npm:0.26.2"
-  dependencies:
-    sourcemap-codec: ^1.4.8
-  checksum: b4db4e2b370ac8d9ffc6443a2b591b75364bf1fc9121b5a4068d5b89804abff6709d1fa4a0e0c2d54f2e61e0e44db83efdfe219a5ab0ba6d25ee1f2b51fbed55
   languageName: node
   linkType: hard
 
@@ -2185,7 +2176,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"set-cookie-parser@npm:^2.4.8":
+"set-cookie-parser@npm:^2.5.1":
   version: 2.5.1
   resolution: "set-cookie-parser@npm:2.5.1"
   checksum: b99c37f976e68ae6eb7c758bf2bbce1e60bb54e3eccedaa25f2da45b77b9cab58d90674cf9edd7aead6fbeac6308f2eb48713320a47ca120d0e838d0194513b6
@@ -2639,9 +2630,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "vite@npm:3.2.1"
+"vite@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "vite@npm:3.2.2"
   dependencies:
     esbuild: ^0.15.9
     fsevents: ~2.3.2
@@ -2670,7 +2661,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: d33f6f4c80f85f327cf74c56d2189f1ba1d808987501eae9455c65bbb1ba5ea96af0f68647e18fe0c61e82126ea91f10480c1e80964a6836a751502647a42f2b
+  checksum: 7197ac91c612dda922367a95afa1b210353d6168d41845c186e2217bda1328d17b021b93d8089e336f9533b94645ae5dca18bb10937759f559c87006dd957fcd
   languageName: node
   linkType: hard
 
@@ -2678,8 +2669,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "website@workspace:."
   dependencies:
-    "@sveltejs/adapter-static": ^1.0.0-next.46
-    "@sveltejs/kit": ^1.0.0-next.526
+    "@sveltejs/adapter-static": ^1.0.0-next.47
+    "@sveltejs/kit": ^1.0.0-next.531
     eslint: ^8.26.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
@@ -2690,7 +2681,7 @@ __metadata:
     svelte-check: ^2.9.2
     svelte-preprocess: ^4.10.7
     typescript: ~4.8.4
-    vite: ^3.2.1
+    vite: ^3.2.2
   languageName: unknown
   linkType: soft
 
