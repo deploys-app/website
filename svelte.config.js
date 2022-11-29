@@ -7,7 +7,9 @@ const config = {
 		sass: true
 	}),
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			fallback: '404.html'
+		})
 	}
 }
 
