@@ -1,11 +1,17 @@
+import { error } from '@sveltejs/kit'
+
 export async function load ({ fetch }) {
 	const resp = await fetch('https://api.deploys.app/billing.skus', {
-		// workaround for ssr fetch not sending origin but verify cors response headers
+		method: 'POST',
 		headers: {
-			origin: 'localhost'
-		}
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({})
 	})
 	const res = await resp.json()
+	if (!res.ok) {
+		throw error(res.error.message)
+	}
 	return {
 		price: res.result
 	}
