@@ -1,4 +1,6 @@
 <script>
+	import logo from '$lib/assets/logo.png'
+
 	let active = false
 	let fixed = false
 	let scrolling = false
@@ -25,7 +27,7 @@
 	on:click|stopPropagation={() => {}}>
 	<div class="_dp-f _alit-ct _fw-w _jtfct-spbtw">
 		<a href="/">
-			<img src="/images/logo.png" height="50" alt="Deploys.app">
+			<img src={logo} height="50" alt="Deploys.app">
 		</a>
 		<div class="navbar-toggle" on:click={() => active = !active}>
 			<div class="navbar-toggle-container">

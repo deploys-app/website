@@ -1,4 +1,9 @@
 <script>
+	import imgDatabase from '$lib/assets/database.svg'
+	import imgBusiness1 from '$lib/assets/business1.png'
+	import imgBusiness2 from '$lib/assets/business2.png'
+	import imgAction from '$lib/assets/action.png'
+
 	export let data
 	$: ({ price } = data)
 	const perMonth = 60 * 60 * 24 * 30
@@ -19,7 +24,7 @@
 				<a class="moon-button _als-fst-lg _als-ct" href="/#price">Get your plans</a>
 			</div>
 			<div class="_mgt-16px">
-				<img class="_w-100pct" src="/images/database.svg" alt="Server Architecture">
+				<img class="_w-100pct" src={imgDatabase} alt="Server Architecture">
 			</div>
 		</div>
 	</div>
@@ -81,7 +86,7 @@
 	<div class="lo-container">
 		<div class="lo-12 lo-6-md _gg-24px">
 			<div>
-				<img class="dp-b _mgh-at _w-100pct" src="/images/business1.png" alt="Business">
+				<img class="dp-b _mgh-at _w-100pct" src={imgBusiness1} alt="Business">
 			</div>
 			<div>
 				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _mgbt-16px">
@@ -147,7 +152,7 @@
 			</div>
 
 			<div class="_od-2-lg _od-1">
-				<img class="dp-b _mgh-at _w-100pct" src="/images/business2.png" alt="Business">
+				<img class="dp-b _mgh-at _w-100pct" src={imgBusiness2} alt="Business">
 			</div>
 		</div>
 	</div>
@@ -156,7 +161,7 @@
 	<div class="lo-container">
 		<div class="lo-12 lo-6-md _gg-24px">
 			<div>
-				<img class="dp-b _mgh-at _w-100pct" src="/images/action_img.png" alt="Business">
+				<img class="dp-b _mgh-at _w-100pct" src={imgAction} alt="Business">
 			</div>
 			<div class="_dp-f _fdrt-cl _jtfct-ct">
 				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-white _mgbt-16px">
