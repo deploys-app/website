@@ -286,23 +286,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@sveltejs/adapter-static@npm:1.0.1"
+"@sveltejs/adapter-static@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@sveltejs/adapter-static@npm:1.0.4"
   peerDependencies:
     "@sveltejs/kit": ^1.0.0
-  checksum: 5d40859d3b925dd2ff595af971ec0feeca3ec4672f4a0291dc5a5ff572c05a3bce202228376cd348aec65687337b740a2fb3456a0b118807a37272c2fec754b0
+  checksum: 6d50a461c1b61424f337114e4582702834e2d4a7946c902e1ae92e019055cfc787b2ed207fc6f2a0e9a630d3ee46e67e91b22c7c7a6dbf22c53797e20a15936e
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.10":
-  version: 1.0.10
-  resolution: "@sveltejs/kit@npm:1.0.10"
+"@sveltejs/kit@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@sveltejs/kit@npm:1.1.1"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^2.0.0
     "@types/cookie": ^0.5.1
     cookie: ^0.5.0
-    devalue: ^4.2.0
+    devalue: ^4.2.2
     esm-env: ^1.0.0
     kleur: ^4.1.5
     magic-string: ^0.27.0
@@ -311,13 +311,13 @@ __metadata:
     set-cookie-parser: ^2.5.1
     sirv: ^2.0.2
     tiny-glob: ^0.2.9
-    undici: 5.14.0
+    undici: 5.15.0
   peerDependencies:
     svelte: ^3.54.0
     vite: ^4.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 971d489c863c3e15af7d5b6afa1423dc2d584592e11543066d52dbb6851e1de502c0c3f519fcf1f0611836d50bd89cd776fe063b6c7c5cf187cadc9f03266ecf
+  checksum: aa7f95ed6667b5323b5fcee89b3d90813ed15ac0d582d26058ba32e21da710c0fa7f75e452064745e8bdbbe04f12514106cc99223eeeaff4c8dedce27e1f010b
   languageName: node
   linkType: hard
 
@@ -730,10 +730,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devalue@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "devalue@npm:4.2.0"
-  checksum: 29f29f72255b6330030773e02def96aa118dc410f5f2d2d389d674068bd2a698668421a0d2176d7c98e7941cbe5d535a251002d589ecc222f6e2b16783351b3d
+"devalue@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "devalue@npm:4.2.2"
+  checksum: 68446dc824150f6712d8a655174eefe67d0e116dd1a7262f66440a2d0735fe4e1a11c5b8e434cf0245c7411a9239b02ff909a13360f18f7d6ca56b01a9c144d7
   languageName: node
   linkType: hard
 
@@ -923,9 +923,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.31.0":
-  version: 8.31.0
-  resolution: "eslint@npm:8.31.0"
+"eslint@npm:^8.32.0":
+  version: 8.32.0
+  resolution: "eslint@npm:8.32.0"
   dependencies:
     "@eslint/eslintrc": ^1.4.1
     "@humanwhocodes/config-array": ^0.11.8
@@ -968,7 +968,7 @@ __metadata:
     text-table: ^0.2.0
   bin:
     eslint: bin/eslint.js
-  checksum: 5e5688bb864edc6b12d165849994812eefa67fb3fc44bb26f53659b63edcd8bcc68389d27cc6cc9e5b79ee22f24b6f311fa3ed047bddcafdec7d84c1b5561e4f
+  checksum: 23c8fb3c57291eecd9c1448faf603226a8f885022a2cd96e303459bf72e39b7f54987c6fb948f0f9eecaf7085600e6eb0663482a35ea83da12e9f9141a22b91e
   languageName: node
   linkType: hard
 
@@ -1949,12 +1949,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.2":
-  version: 2.8.2
-  resolution: "prettier@npm:2.8.2"
+"prettier@npm:^2.8.3":
+  version: 2.8.3
+  resolution: "prettier@npm:2.8.3"
   bin:
     prettier: bin-prettier.js
-  checksum: 740c56c2128d587d656ea1dde9bc9c3503dfc94db4f3ac387259215eeb2e216680bdad9d18a0c9feecc6b42cfa188d6fa777df4c36c1d00cedd4199074fbfbd2
+  checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
   languageName: node
   linkType: hard
 
@@ -2424,10 +2424,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:^3.55.0":
-  version: 3.55.0
-  resolution: "svelte@npm:3.55.0"
-  checksum: 0b182973a4152fec8baa59cc168ca4528d63faba130bc83063a7d55d1732a81303b48745f4bffe53436b875b9c98960b0265d45473e5b3d25c77b116fdc274f0
+"svelte@npm:^3.55.1":
+  version: 3.55.1
+  resolution: "svelte@npm:3.55.1"
+  checksum: ce66391bae68b2055a0a63ee0477e73f036247d4dd5abd5240372d5f4971a452ad29c4ef2c630ab089697429edd61756ef7b764e7597ad7e897ce9f8a9457fec
   languageName: node
   linkType: hard
 
@@ -2514,12 +2514,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:5.14.0":
-  version: 5.14.0
-  resolution: "undici@npm:5.14.0"
+"undici@npm:5.15.0":
+  version: 5.15.0
+  resolution: "undici@npm:5.15.0"
   dependencies:
     busboy: ^1.6.0
-  checksum: 7a076e44d84b25844b4eb657034437b8b9bb91f17d347de474fdea1d4263ce7ae9406db79cd30de5642519277b4893f43073258bcc8fed420b295da3fdd11b26
+  checksum: cdc03ceff8d2b76a5ae08dc48d0b9d44dcb970f6e89e8a3cfe7031b9351dd3c90b223c143565c153a5f1165cd573aae1b128e6b9f557b4af4eb36da337a2a345
   languageName: node
   linkType: hard
 
@@ -2611,15 +2611,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "website@workspace:."
   dependencies:
-    "@sveltejs/adapter-static": ^1.0.1
-    "@sveltejs/kit": ^1.0.10
-    eslint: ^8.31.0
+    "@sveltejs/adapter-static": ^1.0.4
+    "@sveltejs/kit": ^1.1.1
+    eslint: ^8.32.0
     eslint-config-prettier: ^8.6.0
     eslint-plugin-svelte3: ^4.0.0
-    prettier: ^2.8.2
+    prettier: ^2.8.3
     prettier-plugin-svelte: ^2.9.0
     sass: ^1.57.1
-    svelte: ^3.55.0
+    svelte: ^3.55.1
     svelte-check: ^3.0.2
     svelte-preprocess: ^5.0.0
     typescript: ~4.9.4
