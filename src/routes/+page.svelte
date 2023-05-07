@@ -5,9 +5,13 @@
 	import imgAction from '$lib/assets/action.png'
 
 	export let data
-	$: ({ price } = data)
+	$: price = data.price
 	const perMonth = 60 * 60 * 24 * 30
 
+	/**
+	 * @param {number} v
+	 * @param {number} [d]
+	*/
 	function format (v, d) {
 		return v.toLocaleString(undefined, { maximumFractionDigits: d })
 	}
