@@ -21,11 +21,11 @@
 	<div class="lo-container">
 		<div class="lo-12 lo-6-md _gg-32px">
 			<div class="_dp-f _fdrt-cl _jtfct-ct">
-				<h1 class="_fw-700 _fs-1300-lg _fs-1100 _cl-white _mgbt-16px">
+				<h1 class="_fw-700 _fs-12:lg _fs-11 _cl-white _mgbt-16px">
 					Deploy and run containers!
 				</h1>
-				<p class="_fs-500 _fw-500 _cl-white _mgbt-48px">Deploys.app is a platform as a service based on Kubernetes for run containers on the cloud.</p>
-				<a class="moon-button _als-fst-lg _als-ct" href="/#price">Get your plans</a>
+				<p class="_fs-500 _fw-500 _cl-white _mgbt-10">Deploys.app is a platform as a service based on Kubernetes for run containers on the cloud.</p>
+				<a class="button _als-fst:lg _als-ct" href="/#price">Get your plans</a>
 			</div>
 			<div class="_mgt-16px">
 				<img class="_w-100pct" src={imgDatabase} alt="Server Architecture">
@@ -35,12 +35,12 @@
 </section>
 <section class="section section-feature" id="feature">
 	<div class="lo-container">
-		<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _tal-ct _mgbt-16px">
+		<h2 class="_fw-700 _fs-10 _fs-1100-lg _cl-neutral-500 _tal-ct _mgbt-16px">
 			Designed for developers.
 			<br>
 			Built for business.
 		</h2>
-		<div class="lo-12 lo-6-md lo-4-lg _gg-16px">
+		<div class="lo-12 lo-6:md lo-4:lg _gg-16px">
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-light fa-server"></i>
@@ -86,14 +86,14 @@
 		</div>
 	</div>
 </section>
-<section class="section _pdv-48px _pdv-70px-lg">
+<section class="section _pdv-48px _pdv-70px:lg">
 	<div class="lo-container">
 		<div class="lo-12 lo-6-md _gg-24px">
 			<div>
 				<img class="dp-b _mgh-at _w-100pct" src={imgBusiness1} alt="Business">
 			</div>
 			<div>
-				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _mgbt-16px">
+				<h2 class="_fw-700 _fs-1000 _fs-1100:lg _cl-neutral-500 _mgbt-16px">
 					Solutions for Your small
 					<br>
 					business
@@ -123,10 +123,10 @@
 		</div>
 	</div>
 </section>
-<section class="section _pdv-48px _pdv-70px-lg">
+<section class="section _pdv-48px _pdv-70px:lg">
 	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-24px">
-			<div class="_od-2 _od-1-lg">
+		<div class="lo-12 lo-6:md _gg-24px">
+			<div class="_od-2 _od-1:lg">
 				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _mgbt-16px">
 					Solutions for Your big
 					<br>
@@ -174,7 +174,7 @@
 				<p class="_cl-white _mgbt-32px">
 					Deploys your workloads to any regions. (will available more in the future)
 				</p>
-				<a class="moon-button _als-fst" href="https://console.deploys.app">Get Start</a>
+				<a class="nm-button _als-fst" href="https://console.deploys.app">Get Start</a>
 			</div>
 		</div>
 	</div>
@@ -194,8 +194,8 @@
 		</div>
 		<div>
 
-			<div class="moon-table-container">
-				<table class="moon-table">
+			<div class="nm-table-container">
+				<table class="nm-table">
 					<thead>
 					<tr>
 						<th class="_tal-ct">RESOURCE</th>
@@ -268,15 +268,15 @@
 </section>
 <section class="section section-cta">
 	<div class="lo-container">
-		<div class="lo-12 lo-8-4-md">
+		<div class="lo-12-1 lo-8-4:md">
 			<div class="_dp-f _fdrt-cl _jtfct-ct">
-				<h4 class="_fw-700 _tal-ct _fs-900 _fs-1100-lg _cl-white _mgbt-16px">
+				<h4 class="_fw-700 _tal-ct _fs-9 _fs-11:lg _cl-white _mgbt-6">
 					Start growing with Deploys.app today!
 				</h4>
 				<p class="_cl-white _tal-ct">30-day moneyback guarantee. No questions asked.</p>
 			</div>
-			<div class="_dp-f _fdrt-cl _jtfct-ct _mgt-16px _mgt-0px-lg">
-				<a class="moon-button _als-ct _als-fe-lg _cl-primary-500 _bgcl-white" href="mailto:contact@moonrhythm.io">Contact us</a>
+			<div class="_dp-f _fdrt-cl _jtfct-ct _mgt-6 _mgt-0:lg">
+				<a class="button _als-ct _als-fe:lg _cl-primary-active _bgcl-white" href="mailto:contact@moonrhythm.io">Contact us</a>
 			</div>
 		</div>
 	</div>

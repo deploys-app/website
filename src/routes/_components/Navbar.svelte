@@ -30,7 +30,7 @@
 
 <svelte:window on:scroll={handleScroll} on:click={() => active = false}/>
 
-<nav class="moon-navbar lo-container"
+<nav class="navbar lo-container"
 	class:navbar-fixed={fixed}
 	on:click|stopPropagation={() => {}} aria-hidden="true">
 	<div class="_dp-f _alit-ct _fw-w _jtfct-spbtw">
@@ -58,7 +58,7 @@
 				</li>
 				<li class="navbar-menu">
 					<div class="_dp-f _jtfct-ct">
-						<a class="moon-button _cl-light-primary nav-link -small" href="https://console.deploys.app" on:click={close}>Console</a>
+						<a class="button _cl-light-primary nav-link -small" href="https://console.deploys.app" on:click={close}>Console</a>
 					</div>
 				</li>
 			</ul>

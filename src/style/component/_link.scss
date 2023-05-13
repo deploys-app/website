@@ -2,7 +2,7 @@ $components-colors: (
 	'secondary',
 );
 
-.#{$prefix}link {
+.link {
 	position: relative;
 
 	color: var(--color-primary-500);

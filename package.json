@@ -13,6 +13,8 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@nomimono/nomimono-css": "^0.4.15",
+		"@nomimono/nomimono-theme": "^0.4.2",
 		"@sveltejs/adapter-static": "^2.0.2",
 		"@sveltejs/kit": "^1.16.2",
 		"eslint": "^8.40.0",

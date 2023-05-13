@@ -1,4 +1,4 @@
-.#{$prefix}navbar {
+.navbar {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -66,9 +66,10 @@
 			padding: .5rem 0;
 			font-size: var(--font-size-600);
 			text-align: center;
+			list-style: none;
 		}
 
-		@include mq('md') {
+		@media (min-width: 768px) {
 			position: relative;
 			opacity: 1;
 			visibility: visible;
@@ -124,7 +125,7 @@
 			}
 		}
 
-		@include mq('md') {
+		@media (min-width: 768px) {
 			display: none;
 		}
 	}

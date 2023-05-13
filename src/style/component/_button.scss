@@ -73,7 +73,7 @@ $components-colors: (
 	}
 }
 
-.#{$prefix}button {
+.button {
 	@extend %base-button;
 
 	color: var(--color-light-primary);
