@@ -2054,13 +2054,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "prettier-plugin-svelte@npm:3.0.0"
+"prettier-plugin-svelte@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "prettier-plugin-svelte@npm:3.0.1"
   peerDependencies:
     prettier: ^3.0.0
     svelte: ^3.2.0 || ^4.0.0-next.0
-  checksum: db70f08ac214d50f6257cf71b4b2413d16a349a216dd5980fba14febc17cdb499304ad7840ace8b090ee97777e2b9eb1b670a632e7985a15f637aac0f155c21f
+  checksum: e2e3bebc8b1978b46f454a55367710f5784ff8d3525f51d8def4341198239736b12d491b1695d2afbbb1de0daa0883c58b94a7118deabf92793c2ef841d08987
   languageName: node
   linkType: hard
 
@@ -2225,16 +2225,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.64.0":
-  version: 1.64.0
-  resolution: "sass@npm:1.64.0"
+"sass@npm:^1.64.1":
+  version: 1.64.1
+  resolution: "sass@npm:1.64.1"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: b4eb9b1bdeb1c00e76427d7fe3e5f80d831327178cdee657aa4e014edfc64ebbfe43177147403da1e04d76a24f4093f5a9b1c8d9d80c94579937d8adc5a6ef66
+  checksum: e908f96f3d5fa5869e2f2aec97548c93d6ef390680af89870fcae8bdbaee2392ac650fbeae8d2ef8e4c99cb9f81e6b3624e1cb659af6d6e746332a22233b5ad8
   languageName: node
   linkType: hard
 
@@ -2648,9 +2648,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.4.5":
-  version: 4.4.5
-  resolution: "vite@npm:4.4.5"
+"vite@npm:^4.4.7":
+  version: 4.4.7
+  resolution: "vite@npm:4.4.7"
   dependencies:
     esbuild: ^0.18.10
     fsevents: ~2.3.2
@@ -2684,7 +2684,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 825d8c13511b764710ca503e603746e20a7cb963194033dc606c46b1650a0d8986b577ba92507b54143cbf467032e9868ea04913a86a8fcb88b69c5b8551938b
+  checksum: 787c4d891da18d0a0545bee07dec73c3201979dcf2b1ea3dc13fdd2d3b9ad76d413bcc0e68502183e309007a612c1f4116adefe0093d95fbbb9cf1c1755f7e41
   languageName: node
   linkType: hard
 
@@ -2710,13 +2710,13 @@ __metadata:
     eslint-config-prettier: ^8.8.0
     eslint-plugin-svelte3: ^4.0.0
     prettier: ^3.0.0
-    prettier-plugin-svelte: ^3.0.0
-    sass: ^1.64.0
+    prettier-plugin-svelte: ^3.0.1
+    sass: ^1.64.1
     svelte: ^4.1.1
     svelte-check: ^3.4.6
     svelte-preprocess: ^5.0.4
     typescript: ~5.1.6
-    vite: ^4.4.5
+    vite: ^4.4.7
   languageName: unknown
   linkType: soft
 
