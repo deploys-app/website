@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte'
 	import logo from '$lib/assets/logo.png'
 
 	let active = false
@@ -7,7 +8,7 @@
 
 	function onScroll () {
 		scrolling = false
-		fixed = window.pageYOffset > 100
+		fixed = window.scrollY > 100
 	}
 
 	function handleScroll () {
@@ -26,6 +27,10 @@
 	function close () {
 		active = false
 	}
+
+	onMount(() => {
+		onScroll()
+	})
 </script>
 
 <svelte:window on:scroll={handleScroll} on:click={() => active = false}/>
