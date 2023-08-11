@@ -103,7 +103,7 @@
 				</p>
 				<div class="fancy-box-2 _mgbt-24px">
 					<div class="fancy-icon">
-						<i class="fa-regular fa-coins"></i>
+						<i class="fa-light fa-coins"></i>
 					</div>
 					<div class="fancy-body">
 						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Pay as you go</h4>
@@ -112,7 +112,7 @@
 				</div>
 				<div class="fancy-box-2 _mgbt-24px">
 					<div class="fancy-icon">
-						<i class="fa-regular fa-repeat-alt"></i>
+						<i class="fa-light fa-repeat-alt"></i>
 					</div>
 					<div class="fancy-body">
 						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Move faster</h4>

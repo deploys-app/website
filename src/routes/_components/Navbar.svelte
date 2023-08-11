@@ -39,7 +39,7 @@
 		</a>
 		<div class="navbar-toggle" on:click={toggle} on:keypress={toggle} tabindex="0" role="button">
 			<div class="navbar-toggle-container">
-				<i class="fa-regular fa-bars _fs-700"></i>
+				<i class="fa-light fa-bars _fs-700"></i>
 			</div>
 		</div>
 		<div class="navbar-menu-container" class:active={active}>
