@@ -5,12 +5,12 @@ Deploys.app Website
 ## Development
 
 ```shell
-yarn install
-yarn dev
+bun install
+bun -b run dev
 ```
 
 ### Build
 
 ```shell
-yarn build
+bun run build
 ```
