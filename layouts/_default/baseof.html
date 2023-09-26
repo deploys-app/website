@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Deploys.app</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.png">
+<script src="https://unpkg.com/hyperscript.org@0.9.11" defer></script>
+<link rel="stylesheet" href="https://cdn.moonrhythm.io/fontawesome-pro/6.4.2/css/all.min.css">
+{{ $style := resources.Get "style/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+{{partial "navbar.html" .}}
+{{block "main" .}}{{end}}

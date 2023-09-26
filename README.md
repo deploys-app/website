@@ -5,12 +5,11 @@ Deploys.app Website
 ## Development
 
 ```shell
-bun install
-bun -b run dev
+make dev
 ```
 
 ### Build
 
 ```shell
-bun run build
+make build
 ```

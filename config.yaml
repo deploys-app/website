@@ -1,0 +1,7 @@
+baseURL: 'https://www.deploys.app/'
+languageCode: 'en-us'
+title: 'Deploys.app'
+disableKinds:
+- taxonomy
+ignoreErrors:
+- error-disable-taxonomy
