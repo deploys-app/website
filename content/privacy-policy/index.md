@@ -5,21 +5,21 @@ header: Privacy Policy for Customer
 
 Moon Rhythm Co., Ltd. recognizes the importance of the protection of your personal data. This Privacy Policy explains our practices regarding the collection, use or disclosure of personal data including other rights of the Data Subjects in accordance with the Personal Data Protection Laws.
 
-## Collection of Personal Data
+### Collection of Personal Data
 
 We will collect your personal data that receive directly from you as following:
 
 - Google Login
 
-## Types of Data Collected
+### Types of Data Collected
 
 **Contact information** such as address, telephone number, e-mail address, etc.
 
-## Children
+### Children
 
 If you are under the age of 20 or having legal restrictions, we may collect use or disclose your personal data. We require your parents or guardian to be aware and provide consent to us or allowed by applicable laws. If we become aware that we have collected personal data from children without verification of parental consent, we take steps to remove that information from our servers.
 
-## Storage of Data
+### Storage of Data
 
 We store your personal data as hard copy and soft copy.
 
@@ -27,18 +27,18 @@ We store your personal data by using the following systems:
 
 - Third-party server service providers outside of Thailand
 
-## Use of Data
+### Use of Data
 
 We use the collected data for various purposes:
 
 - To create and manage accounts
 - To process payments of products or services
 
-## Data Retention
+### Data Retention
 
 We will retain your personal data for as long as necessary during the period you are a customer or under relationship with us, or for as long as necessary in connection with the purposes set out in this Privacy Policy, unless law requires or permits a longer retention period. We will erase, destroy or anonymize your personal data when it is no longer necessary or when the period lapses.
 
-## Data Subject Rights
+### Data Subject Rights
 
 Subject to the Personal Data Protection Laws thereof, you may exercise any of these rights in the following:
 
@@ -60,24 +60,24 @@ Subject to the Personal Data Protection Laws thereof, you may exercise any of th
 
 You can exercise these rights as the Data Subject by contacting our Data Protection Officer as mentioned below. We will notify the result of your request within 30 days upon receipt of such request. If we deny the request, we will inform you of the reason via SMS, email address, telephone, registered mail (if applicable).
 
-## Data Security
+### Data Security
 
 We endeavor to protect your personal data by establishing security measures in accordance with the principles of confidentiality, integrity, and availability to prevent loss, unauthorized or unlawful access, destruction, use, alteration, or disclosure including administrative safeguard, technical safeguard, physical safeguard and access controls.
 
-## Data Breach Notification
+### Data Breach Notification
 
 We will notify the Office of the Personal Data Protection Committee without delay and, where feasible, within 72 hours after having become aware of it, unless such personal data breach is unlikely to result in a risk to the rights and freedoms of you. If the personal data breach is likely to result in a high risk to the rights and freedoms of you, we will also notify the personal data breach and the remedial measures to you without delay through our website, SMS, email address, telephone or registered mail (if applicable).
 
-## Changes to this Privacy Policy
+### Changes to this Privacy Policy
 
 We may change this Privacy Policy from time to time. Any changes of this Privacy Policy, we encourage you to frequently check on our website.
 This Privacy Policy was last updated and effective on 2nd June 2022
 
-## Links to Other Sites
+### Links to Other Sites
 
 The purpose of this Privacy Policy is to offer products or services and use of our website. Any websites from other domains found on our site is subject to their privacy policy which is not related to us.
 
-## Contact Information
+### Contact Information
 
 If you have any questions about this Privacy Policy or would like to exercise your rights, you can contact us by using the following details:
 
