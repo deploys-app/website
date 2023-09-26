@@ -1,0 +1,19 @@
+{{define "main"}}
+<section class="section _pdt-70px _bgcl-neutral-700">
+    <div class="lo-container _gg-16px _mgt-32px _mgbt-16px">
+        <h1>{{.Params.header}}</h1>
+    </div>
+</section>
+
+<section class="section _mgbt-16px _cl-neutral-500 single-content">
+    <div class="lo-container _gg-16px _mgt-16px">
+        {{.Content}}
+    </div>
+</section>
+
+<style>
+    .single-content ul {
+        list-style: inside;
+    }
+</style>
+{{end}}
