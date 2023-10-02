@@ -2,3 +2,7 @@ https://:project.pages.dev/*
   x-robots-tag: noindex
 /*
   x-frame-options: DENY
+/image/*
+  cache-control: public, max-age=3600
+/style/*
+  cache-control: public, max-age=3600
