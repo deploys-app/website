@@ -3,6 +3,8 @@ https://:project.pages.dev/*
 /*
   x-frame-options: DENY
 /image/*
-  cache-control: public, max-age=3600
+  cache-control: public, max-age=604800
 /style/*
-  cache-control: public, max-age=3600
+  cache-control: public, max-age=604800
+/fonts/*
+  cache-control: public, max-age=604800
