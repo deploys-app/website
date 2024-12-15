@@ -182,7 +182,7 @@
 		</div>
 		<div>
 			<div class="moon-table-container">
-				{{$p := (getJSON "https://api.deploys.app/billing.skus").result}}
+				{{$p := ((resources.GetRemote "https://api.deploys.app/billing.skus") | transform.Unmarshal).result}}
 				{{$m := mul 60 60 24 30}}
 				<table class="moon-table">
 					<thead>
