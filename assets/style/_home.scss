@@ -1,0 +1,167 @@
+/*
+ * Homepage + marketing page layout (semantic; replaces the old atomic utilities)
+ *********************************************/
+
+/* Shared section typography */
+.section-heading {
+	font-weight: 700;
+	font-size: 2.25rem;
+	line-height: 1.15;
+	color: var(--color-content);
+	margin-bottom: 1rem;
+
+	@include mq('lg') { font-size: 2.5rem; }
+
+	&.-center { text-align: center; }
+	&.-invert { color: #fff; }
+
+	&.-xl {
+		font-size: 2.5rem;
+		@include mq('lg') { font-size: 3.125rem; }
+	}
+}
+
+.section-lead {
+	color: var(--color-content);
+	margin-bottom: 2rem;
+
+	&.-center { text-align: center; }
+	&.-invert { color: var(--color-content-inv-muted); }
+}
+
+/* Vertically-centered text column (hero, regions, CTA copy) */
+.hero-copy,
+.region-copy,
+.cta-copy {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Fluid image inside media columns */
+.hero-art img,
+.split-media img {
+	display: block;
+	width: 100%;
+	margin-inline: auto;
+}
+
+/* ---- Hero ---- */
+.hero-grid {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+
+	@include mq('md') { grid-template-columns: 1fr 1fr; }
+}
+
+.hero-title {
+	font-weight: 700;
+	font-size: 2.5rem;
+	line-height: 1.1;
+	color: #fff;
+	margin-bottom: 1rem;
+
+	@include mq('lg') { font-size: 3.125rem; }
+}
+
+.hero-lead {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: var(--color-content-inv-muted);
+	margin-bottom: 3rem;
+}
+
+.hero-cta {
+	align-self: center;
+	@include mq('lg') { align-self: flex-start; }
+}
+
+.hero-art {
+	margin-top: 1rem;
+}
+
+/* ---- Features ---- */
+.feature-grid {
+	display: grid;
+	gap: 1rem;
+
+	@include mq('md') { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	@include mq('lg') { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* ---- Split sections (small business / enterprise) ---- */
+.section-split {
+	padding-block: 3rem;
+	@include mq('lg') { padding-block: 4.375rem; }
+}
+
+.split-grid {
+	display: grid;
+	gap: 1.5rem;
+	align-items: center;
+
+	@include mq('md') { grid-template-columns: 1fr 1fr; }
+}
+
+/* Enterprise: media on top (mobile), text-first on desktop. */
+.split-grid.-flip-lg {
+	> .split-body { order: 2; }
+	> .split-media { order: 1; }
+
+	@include mq('lg') {
+		> .split-body { order: 1; }
+		> .split-media { order: 2; }
+	}
+}
+
+.region-cta {
+	align-self: flex-start;
+}
+
+/* ---- Multi-region ---- */
+.section-regions {
+	padding-block: 4.375rem;
+}
+
+/* ---- CTA band ---- */
+.cta-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+
+	@include mq('md') {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.cta-title {
+	font-weight: 700;
+	text-align: center;
+	font-size: 2rem;
+	color: #fff;
+	margin-bottom: 1rem;
+
+	@include mq('lg') { font-size: 2.5rem; }
+}
+
+.cta-sub {
+	color: #fff;
+	text-align: center;
+}
+
+.cta-action {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 1rem;
+
+	@include mq('lg') { margin-top: 0; }
+}
+
+.cta-button {
+	align-self: center;
+	@include mq('lg') { align-self: flex-end; }
+}

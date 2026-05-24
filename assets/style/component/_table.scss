@@ -71,6 +71,20 @@
 		font-weight: 600;
 	}
 
+	&.-center {
+		th,
+		td {
+			text-align: center;
+		}
+	}
+
+	/* Small qualifier label inside a cell (e.g. "Uncached"/"Cached"). */
+	.note {
+		font-size: 0.6875rem;
+		color: var(--color-content-muted);
+		font-family: var(--font-family-primary);
+	}
+
 	&.-striped {
 		tbody tr:nth-child(even) {
 			background-color: var(--color-base-soft);
