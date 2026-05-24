@@ -21,20 +21,19 @@ Most of the site is **not** content-driven. The homepage (`/`) is hand-authored 
 
 Taxonomies are disabled in `config.yaml` (`disableKinds: [taxonomy]` + the matching `ignoreErrors`); don't reintroduce them without updating both keys.
 
-### Styling system (custom atomic CSS)
+### Styling system (Tailwind-like utilities + components)
 
-`assets/style/` is a bespoke utility-first CSS framework, compiled by Hugo Pipes (`css.Sass | resources.Minify | resources.Fingerprint`). The structure is layered and the order in `main.scss` is load-bearing — `theme` defines CSS custom properties that the atomic classes consume.
+`assets/style/` is hand-authored CSS compiled by Hugo Pipes (`css.Sass | resources.Minify | resources.Fingerprint`) — there is **no Tailwind build step / npm**; the class names just mirror Tailwind's. Import order in `main.scss` is load-bearing: `theme` (tokens) → `reset` → `fonts` → `utilities` → `component/all`.
 
-- `atomic/` — single-property utilities prefixed with `_` (the `$atom-prefix` in `atomic/config.scss`). Naming is abbreviated: `_mgbt-16px` (margin-bottom), `_dp-f` (display:flex), `_cl-neutral-500` (color), `_fs-700` (font-size), `_gg-16px` (grid-gap), `_jtfct-spbtw` (justify-content:space-between), `_pdt-70px` (padding-top), `_als-ct` (align-self:center). Every atomic also auto-generates breakpoint variants: `_dp-n-lg` = `display:none` at `lg` and up.
-- `layout/` — `lo-container`, `lo-12`/`lo-6-md`/`lo-4-lg` grid spans. The grid is mobile-first with `-md`/`-lg` overrides.
-- `component/` — `moon-*` and named components: `moon-navbar`, `moon-button`, `fancy-box`, `fancy-icon`, `section`, etc.
-- `utility/`, `mixins/`, `function/` — animation helpers, typography, breakpoint mixin.
+- `_utilities.scss` — Tailwind-named utility classes (`flex`, `grid`, `gap-6`, `mb-4`, `text-content`, `text-[2.5rem]`, `md:grid-cols-2`, `lg:order-1`, `.container`, …) written by hand to match Tailwind / the console's markup vocabulary. Responsive `md:` / `lg:` prefixes resolve at 1024 / 1200 via the `mq` mixin; arbitrary values use escaped selectors (`.text-\[2\.5rem\]`).
+- `component/` — unprefixed component classes matching the console: `button`, `navbar`, `table`/`table-container`, `panel`, `fancy-box` / `fancy-icon` (feature cards), `section-*`, `link`, etc. (`$prefix` in `component/config.scss` is empty.)
+- `function/` — `mq` / `mqmw` breakpoint mixins.
 
-When adding styles, prefer composing existing atomics in markup over writing new CSS. Reach for a new component class only when a pattern repeats and needs semantic naming.
+When adding styles, compose the Tailwind-like utilities in markup; add a class to `_utilities.scss` only when one is missing, and reach for a component class when a pattern repeats.
 
 ### Theme tokens
 
-`assets/style/_theme.scss` defines all color/spacing/typography as CSS custom properties (`--color-primary-500`, `--color-neutral-700`, etc.). `atomic/config.scss` maps these into `$colors`/`$spacings`/etc. so atomic classes resolve to the CSS variables. To add a color or size scale, add it in `_theme.scss` and the corresponding map in `atomic/config.scss`.
+`assets/style/_theme.scss` defines all color/spacing/typography as CSS custom properties, aligned to the **console's design system** — magenta `--color-primary-*` on console "Ink" (dark) / "Paper" (light) surfaces, plus semantic `--color-content` / `--color-base` / `--color-ink` / `--color-line` tokens. Utilities and component classes reference these vars directly. Fonts are Hanken Grotesk (UI/display) + JetBrains Mono (machine data), loaded from Google Fonts in `baseof.html`.
 
 ### Interactivity
 

@@ -1,107 +1,107 @@
 {{define "main"}}
 
 <section class="section section-hero">
-	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-32px">
-			<div class="_dp-f _fdrt-cl _jtfct-ct">
-				<h1 class="_fw-700 _fs-1300-lg _fs-1100 _cl-white _mgbt-16px">
+	<div class="container">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div class="flex flex-col justify-center">
+				<h1 class="font-bold text-[2.5rem] lg:text-[3.125rem] text-white mb-4">
 					Deploy and run containers with confidence.
 				</h1>
-				<p class="_fs-500 _fw-500 _cl-content-inv-muted _mgbt-48px">Deploys.app is a Kubernetes-based platform-as-a-service for running containerized workloads in the cloud.</p>
-				<a class="moon-button _als-fst-lg _als-ct" href="/#price">View pricing</a>
+				<p class="text-lg font-medium text-content-inv-muted mb-12">Deploys.app is a Kubernetes-based platform-as-a-service for running containerized workloads in the cloud.</p>
+				<a class="button self-center lg:self-start" href="/#price">View pricing</a>
 			</div>
-			<div class="_mgt-16px">
-				<img class="_w-100pct" src="{{ (resources.Get "image/database.svg" | resources.Fingerprint).RelPermalink }}" alt="Server Architecture">
+			<div class="mt-4">
+				<img class="w-full" src="{{ (resources.Get "image/database.svg" | resources.Fingerprint).RelPermalink }}" alt="Server Architecture">
 			</div>
 		</div>
 	</div>
 </section>
 
 <section class="section section-feature" id="feature">
-	<div class="lo-container">
-		<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _tal-ct _mgbt-16px">
+	<div class="container">
+		<h2 class="font-bold text-4xl lg:text-[2.5rem] text-content text-center mb-4">
 			Designed for developers.
 			<br>
 			Built for business.
 		</h2>
-		<div class="lo-12 lo-6-md lo-4-lg _gg-16px">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-light fa-server"></i>
 				</div>
-				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Web Service</h3>
-				<p class="_fw-500 _cl-dark-secondary">Run services that expose secure HTTPS endpoints to the internet.</p>
+				<h3 class="text-content font-bold mb-4 text-2xl">Web Service</h3>
+				<p class="font-medium text-content-muted">Run services that expose secure HTTPS endpoints to the internet.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-light fa-database"></i>
 				</div>
-				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">TCP Service</h3>
-				<p class="_fw-500 _cl-dark-secondary">Run internal TCP services within your private network.</p>
+				<h3 class="text-content font-bold mb-4 text-2xl">TCP Service</h3>
+				<p class="font-medium text-content-muted">Run internal TCP services within your private network.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-light fa-microchip"></i>
 				</div>
-				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Worker</h3>
-				<p class="_fw-500 _cl-dark-secondary">Run long-running background workers and queue consumers.</p>
+				<h3 class="text-content font-bold mb-4 text-2xl">Worker</h3>
+				<p class="font-medium text-content-muted">Run long-running background workers and queue consumers.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-light fa-suitcase"></i>
 				</div>
-				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Cron Job</h3>
-				<p class="_fw-500 _cl-dark-secondary">Run scheduled tasks on a flexible cron schedule.</p>
+				<h3 class="text-content font-bold mb-4 text-2xl">Cron Job</h3>
+				<p class="font-medium text-content-muted">Run scheduled tasks on a flexible cron schedule.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-light fa-disc-drive"></i>
 				</div>
-				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Stateful and Stateless</h3>
-				<p class="_fw-500 _cl-dark-secondary">Support both stateless and stateful workloads, backed by persistent SSD storage.</p>
+				<h3 class="text-content font-bold mb-4 text-2xl">Stateful and Stateless</h3>
+				<p class="font-medium text-content-muted">Support both stateless and stateful workloads, backed by persistent SSD storage.</p>
 			</div>
 			<div class="fancy-box">
 				<div class="fancy-icon">
 					<i class="fa-brands fa-docker"></i>
 				</div>
-				<h3 class="_cl-neutral-500 _fw-700 _mgbt-18px _fs-700">Docker Registry</h3>
-				<p class="_fw-500 _cl-dark-secondary">Built-in private container registry for storing and distributing your images.</p>
+				<h3 class="text-content font-bold mb-4 text-2xl">Docker Registry</h3>
+				<p class="font-medium text-content-muted">Built-in private container registry for storing and distributing your images.</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="section _pdv-48px _pdv-70px-lg">
-	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-24px">
+<section class="section py-12 lg:py-20">
+	<div class="container">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<div>
-				<img class="dp-b _mgh-at _w-100pct" src="{{ (resources.Get "image/business1.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
+				<img class="block mx-auto w-full" src="{{ (resources.Get "image/business1.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
 			</div>
 			<div>
-				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _mgbt-16px">
+				<h2 class="font-bold text-4xl lg:text-[2.5rem] text-content mb-4">
 					Solutions for
 					<br>
 					small businesses
 				</h2>
-				<p class="_cl-neutral-500 _mgbt-32px">
+				<p class="text-content mb-8">
 					Run containers on shared Kubernetes nodes to minimize infrastructure costs.
 				</p>
-				<div class="fancy-box-2 _mgbt-24px">
+				<div class="fancy-box-2 mb-6">
 					<div class="fancy-icon">
 						<i class="fa-light fa-coins"></i>
 					</div>
 					<div class="fancy-body">
-						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Pay as you go</h4>
-						<p class="_cl-neutral-500">Pay only for the resources you use — never for an entire server.</p>
+						<h4 class="font-medium text-content mb-2">Pay as you go</h4>
+						<p class="text-content">Pay only for the resources you use — never for an entire server.</p>
 					</div>
 				</div>
-				<div class="fancy-box-2 _mgbt-24px">
+				<div class="fancy-box-2 mb-6">
 					<div class="fancy-icon">
 						<i class="fa-light fa-repeat-alt"></i>
 					</div>
 					<div class="fancy-body">
-						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Move faster</h4>
-						<p class="_cl-neutral-500">Integrate the Deploys.app CLI into your CI/CD pipeline for fully automated deployments.</p>
+						<h4 class="font-medium text-content mb-2">Move faster</h4>
+						<p class="text-content">Integrate the Deploys.app CLI into your CI/CD pipeline for fully automated deployments.</p>
 					</div>
 				</div>
 			</div>
@@ -109,168 +109,168 @@
 	</div>
 </section>
 
-<section class="section _pdv-48px _pdv-70px-lg">
-	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-24px">
-			<div class="_od-2 _od-1-lg">
-				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-neutral-500 _mgbt-16px">
+<section class="section py-12 lg:py-20">
+	<div class="container">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="order-2 lg:order-1">
+				<h2 class="font-bold text-4xl lg:text-[2.5rem] text-content mb-4">
 					Solutions for
 					<br>
 					enterprises
 				</h2>
-				<p class="_cl-neutral-500 _mgbt-32px">
+				<p class="text-content mb-8">
 					Isolate workloads on dedicated nodes you control.
 				</p>
-				<div class="fancy-box-2 _mgbt-24px">
+				<div class="fancy-box-2 mb-6">
 					<div class="fancy-icon">
 						<i class="fa-light fa-tags"></i>
 					</div>
 					<div class="fancy-body">
-						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Allocated resources</h4>
-						<p class="_cl-neutral-500">Dedicated resources reserved exclusively for your workloads, with lower per-unit pricing at scale.</p>
+						<h4 class="font-medium text-content mb-2">Allocated resources</h4>
+						<p class="text-content">Dedicated resources reserved exclusively for your workloads, with lower per-unit pricing at scale.</p>
 					</div>
 				</div>
-				<div class="fancy-box-2 _mgbt-24px">
+				<div class="fancy-box-2 mb-6">
 					<div class="fancy-icon">
 						<i class="fa-light fa-server"></i>
 					</div>
 					<div class="fancy-body">
-						<h4 class="_fw-500 _cl-neutral-500 _mgbt-8px">Bring your own Kubernetes</h4>
-						<p class="_cl-neutral-500">Run the Deploys.app Agent on your own Kubernetes cluster.</p>
+						<h4 class="font-medium text-content mb-2">Bring your own Kubernetes</h4>
+						<p class="text-content">Run the Deploys.app Agent on your own Kubernetes cluster.</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="_od-2-lg _od-1">
-				<img class="dp-b _mgh-at _w-100pct" src="{{ (resources.Get "image/business2.webp" | resources.Fingerprint).RelPermalink }}" alt="Business">
+			<div class="order-1 lg:order-2">
+				<img class="block mx-auto w-full" src="{{ (resources.Get "image/business2.webp" | resources.Fingerprint).RelPermalink }}" alt="Business">
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="section _pdv-70px u-grid-ink">
-	<div class="lo-container">
-		<div class="lo-12 lo-6-md _gg-24px">
+<section class="section py-20 u-grid-ink">
+	<div class="container">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<div>
-				<img class="dp-b _mgh-at _w-100pct" src="{{ (resources.Get "image/action.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
+				<img class="block mx-auto w-full" src="{{ (resources.Get "image/action.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
 			</div>
-			<div class="_dp-f _fdrt-cl _jtfct-ct">
-				<h2 class="_fw-700 _fs-1000 _fs-1100-lg _cl-white _mgbt-16px">
+			<div class="flex flex-col justify-center">
+				<h2 class="font-bold text-4xl lg:text-[2.5rem] text-white mb-4">
 					Deploy to multiple regions
 				</h2>
-				<p class="_cl-content-inv-muted _mgbt-32px">
+				<p class="text-content-inv-muted mb-8">
 					Deploy your workloads across multiple regions, with additional locations coming soon.
 				</p>
-				<a class="moon-button _als-fst" href="https://console.deploys.app">Get started</a>
+				<a class="button self-start" href="https://console.deploys.app">Get started</a>
 			</div>
 		</div>
 	</div>
 </section>
 
 <section class="section section-plan" id="price">
-	<div class="lo-container">
+	<div class="container">
 		<div>
-			<h2 class="_fw-700 _tal-ct _fs-1100 _fs-1300-lg _cl-neutral-500 _mgbt-16px">
+			<h2 class="font-bold text-center text-[2.5rem] lg:text-[3.125rem] text-content mb-4">
 				Simple, usage-based pricing
 			</h2>
-			<p class="_cl-neutral-500 _tal-ct _mgbt-32px">
+			<p class="text-content text-center mb-8">
 				Pay only for what you use — no minimum commitments.<br>
 				All prices include VAT.
 			</p>
 		</div>
 		<div>
-			<div class="moon-table-container">
+			<div class="table-container">
 				{{$p := ((resources.GetRemote "https://api.deploys.app/billing.skus") | transform.Unmarshal).result}}
 				{{$m := mul 60 60 24 30}}
-				<table class="moon-table">
+				<table class="table">
 					<thead>
 					<tr>
-						<th class="_tal-ct">RESOURCE</th>
-						<th class="_tal-ct">UNIT</th>
-						<th class="_tal-ct">PRICE</th>
-						<th class="_tal-ct">FREE TIER<br>(Daily)</th>
+						<th class="text-center">RESOURCE</th>
+						<th class="text-center">UNIT</th>
+						<th class="text-center">PRICE</th>
+						<th class="text-center">FREE TIER<br>(Daily)</th>
 					</tr>
 					</thead>
 					<tbody>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>CPU</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1s CPU time</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>CPU</strong></td>
+						<td class="text-center">1s CPU time</td>
+						<td class="text-center">
 							<div><strong>฿{{mul $p.cpuUsage $m | lang.FormatNumber 2}}/mo</strong></div>
 							<div>฿{{$p.cpuUsage | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400"><strong>{{8640 | lang.FormatNumber 0}} s</strong></td>
+						<td class="text-center"><strong>{{8640 | lang.FormatNumber 0}} s</strong></td>
 					</tr>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>Memory</strong></td>
-						<td class="_tal-ct _cl-neutral-400">Shared</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>Memory</strong></td>
+						<td class="text-center">Shared</td>
+						<td class="text-center">
 							<div><strong>Free</strong></div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400">-</td>
+						<td class="text-center">-</td>
 					</tr>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>Allocated Memory</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>Allocated Memory</strong></td>
+						<td class="text-center">1 GiB</td>
+						<td class="text-center">
 							<div><strong>฿{{mul $p.memory $m | lang.FormatNumber 2}}/mo</strong></div>
 							<div>฿{{$p.memory | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400">-</td>
+						<td class="text-center">-</td>
 					</tr>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>SSD Disk</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>SSD Disk</strong></td>
+						<td class="text-center">1 GiB</td>
+						<td class="text-center">
 							<div><strong>฿{{mul $p.disk $m | lang.FormatNumber 2}}/mo</strong></div>
 							<div>฿{{$p.disk | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400">-</td>
+						<td class="text-center">-</td>
 					</tr>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>Replica</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>Replica</strong></td>
+						<td class="text-center">1</td>
+						<td class="text-center">
 							<div><strong>฿{{mul $p.replica $m | lang.FormatNumber 2}}/mo</strong></div>
 							<div>฿{{$p.replica | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400"><strong>{{216000 | lang.FormatNumber 0}} s</strong></td>
+						<td class="text-center"><strong>{{216000 | lang.FormatNumber 0}} s</strong></td>
 					</tr>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>Egress Bandwidth</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>Egress Bandwidth</strong></td>
+						<td class="text-center">1 GiB</td>
+						<td class="text-center">
 							<div><strong>฿{{$p.egress | lang.FormatNumber 2}}</strong></div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400">
-							<div><strong>1 GiB</strong> <span class="_fs-100">Uncached</span></div>
-							<div><strong>1 GiB</strong> <span class="_fs-100">Cached</span></div>
+						<td class="text-center">
+							<div><strong>1 GiB</strong> <span class="text-xs">Uncached</span></div>
+							<div><strong>1 GiB</strong> <span class="text-xs">Cached</span></div>
 						</td>
 					</tr>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>Registry Egress Bandwidth</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>Registry Egress Bandwidth</strong></td>
+						<td class="text-center">1 GiB</td>
+						<td class="text-center">
 							<div><strong>฿{{$p.registryEgress | lang.FormatNumber 2}}</strong></div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400"><strong>1 GiB</strong></td>
+						<td class="text-center"><strong>1 GiB</strong></td>
 					</tr>
 					<tr>
-						<td class="_tal-ct _cl-neutral-400"><strong>Dropbox Egress Bandwidth</strong></td>
-						<td class="_tal-ct _cl-neutral-400">1 GiB</td>
-						<td class="_tal-ct _cl-neutral-400">
+						<td class="text-center"><strong>Dropbox Egress Bandwidth</strong></td>
+						<td class="text-center">1 GiB</td>
+						<td class="text-center">
 							<div><strong>฿{{$p.dropboxEgress | lang.FormatNumber 2}}</strong></div>
 						</td>
-						<td class="_tal-ct _cl-neutral-400">-</td>
+						<td class="text-center">-</td>
 					</tr>
 						<tr>
-							<td class="_tal-ct _cl-neutral-400"><strong>CDN</strong></td>
-							<td class="_tal-ct _cl-neutral-400">1 Domain</td>
-							<td class="_tal-ct _cl-neutral-400">
+							<td class="text-center"><strong>CDN</strong></td>
+							<td class="text-center">1 Domain</td>
+							<td class="text-center">
 								<div><strong>฿{{mul $p.domainCdn $m | lang.FormatNumber 2}}/mo</strong></div>
 								<div>฿{{$p.domainCdn | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
 							</td>
-							<td class="_tal-ct _cl-neutral-400">-</td>
+							<td class="text-center">-</td>
 						</tr>
 					</tbody>
 				</table>
@@ -280,16 +280,16 @@
 </section>
 
 <section class="section section-cta">
-	<div class="lo-container">
-		<div class="lo-12 lo-8-4-md">
-			<div class="_dp-f _fdrt-cl _jtfct-ct">
-				<h4 class="_fw-700 _tal-ct _fs-900 _fs-1100-lg _cl-white _mgbt-16px">
+	<div class="container">
+		<div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+			<div class="flex flex-col justify-center">
+				<h4 class="font-bold text-center text-[2rem] lg:text-[2.5rem] text-white mb-4">
 					Start building with Deploys.app today.
 				</h4>
-				<p class="_cl-white _tal-ct">30-day money-back guarantee — no questions asked.</p>
+				<p class="text-white text-center">30-day money-back guarantee — no questions asked.</p>
 			</div>
-			<div class="_dp-f _fdrt-cl _jtfct-ct _mgt-16px _mgt-0px-lg">
-				<a class="moon-button _als-ct _als-fe-lg _cl-primary-500 _bgcl-white" href="mailto:contact@moonrhythm.io">Contact us</a>
+			<div class="flex flex-col justify-center mt-4 lg:mt-0">
+				<a class="button self-center lg:self-end text-primary bg-white" href="mailto:contact@moonrhythm.io">Contact us</a>
 			</div>
 		</div>
 	</div>

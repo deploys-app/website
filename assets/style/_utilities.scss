@@ -1,0 +1,111 @@
+/*
+ * Tailwind-like utility classes
+ *********************************************
+ * Hand-authored (no Tailwind build step) utilities whose names mirror
+ * Tailwind / the console's markup vocabulary. Responsive variants use the
+ * `md:` / `lg:` prefixes and resolve at the site breakpoints (1024 / 1200).
+ * Colours resolve to the console design tokens in `_theme.scss`.
+ */
+
+/* Container — centered, breakpoint-capped max width. */
+.container {
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: 1rem;
+}
+
+@include mq('sm') { .container { max-width: 728px; } }
+@include mq('md') { .container { max-width: 984px; } }
+@include mq('lg') { .container { max-width: 1160px; } }
+
+/* Display */
+.block { display: block; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+/* Alignment */
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.self-center { align-self: center; }
+.self-start { align-self: flex-start; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+/* Order */
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+
+/* Sizing */
+.w-full { width: 100%; }
+.mx-auto { margin-inline: auto; }
+
+/* Gap (4 = 1rem) */
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+
+/* Margin */
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mt-4 { margin-top: 1rem; }
+
+/* Padding */
+.py-12 { padding-block: 3rem; }
+.py-20 { padding-block: 5rem; }
+
+/* Font weight */
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
+
+/* Font size */
+.text-xs { font-size: 0.75rem; }
+.text-lg { font-size: 1.125rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-\[2rem\] { font-size: 2rem; }
+.text-\[2\.5rem\] { font-size: 2.5rem; }
+.text-\[3\.125rem\] { font-size: 3.125rem; }
+
+/* Text colour — resolves to console tokens */
+.text-white { color: #fff; }
+.text-content { color: var(--color-content); }
+.text-content-muted { color: var(--color-content-muted); }
+.text-content-inv-muted { color: var(--color-content-inv-muted); }
+.text-primary { color: var(--color-primary-500); }
+
+/* Background */
+.bg-white { background-color: #fff; }
+
+/* ---- Responsive: md (>=1024px) ---- */
+@include mq('md') {
+	.md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.md\:flex-row { flex-direction: row; }
+	.md\:items-center { align-items: center; }
+	.md\:justify-between { justify-content: space-between; }
+}
+
+/* ---- Responsive: lg (>=1200px) ---- */
+@include mq('lg') {
+	.lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.lg\:self-start { align-self: flex-start; }
+	.lg\:self-end { align-self: flex-end; }
+	.lg\:order-1 { order: 1; }
+	.lg\:order-2 { order: 2; }
+	.lg\:mt-0 { margin-top: 0; }
+	.lg\:py-20 { padding-block: 5rem; }
+	.lg\:text-\[2\.5rem\] { font-size: 2.5rem; }
+	.lg\:text-\[3\.125rem\] { font-size: 3.125rem; }
+}
