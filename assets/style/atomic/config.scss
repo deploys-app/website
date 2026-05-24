@@ -70,6 +70,17 @@ $atom-prefix: '_';
 	'dark-primary': var(--color-dark-primary),
 	'dark-secondary': var(--color-dark-secondary),
 
+	'content': var(--color-content),
+	'content-muted': var(--color-content-muted),
+	'content-inv': var(--color-content-inv),
+	'content-inv-muted': var(--color-content-inv-muted),
+	'base': var(--color-base),
+	'base-soft': var(--color-base-soft),
+	'ink': var(--color-ink),
+	'ink-soft': var(--color-ink-soft),
+	'line': var(--color-line),
+	'accent-500': var(--color-accent-500),
+
 	'golden-poppy': var(--color-golden-poppy),
 	'dark-cerulean': var(--color-dark-cerulean),
 	'bittersweet': var(--color-bittersweet),

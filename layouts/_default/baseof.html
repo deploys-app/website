@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
-<title>Deploys.app</title>
+<title>Deploys.app — Deploy and run containers with confidence</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Deploys.app is a Kubernetes-based platform-as-a-service for running containerized workloads in the cloud.">
 <link rel="icon" type="image/webp" href="/favicon.webp">
+<link rel="icon" type="image/png" href="/favicon.png">
 <script src="https://unpkg.com/hyperscript.org@0.9.12/dist/_hyperscript.min.js" defer></script>
-<link rel="stylesheet" href="https://cdn.moonrhythm.io/fontawesome-pro/6.4.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap">
+<link rel="stylesheet" href="https://cdn.moonrhythm.io/fontawesome-pro/6.5.1/css/all.min.css">
 {{ $style := resources.Get "style/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-
+</head>
+<body>
 {{partial "navbar.html" .}}
 {{block "main" .}}{{end}}
+</body>
+</html>

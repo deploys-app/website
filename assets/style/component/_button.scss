@@ -1,55 +1,49 @@
-$components-colors: (
-	'primary'
-	'secondary',
-	'positive',
-	'negative',
-);
-
 %base-button {
-	$height-button-small: 2.25rem;
-	$font-size-button-small: 0.875rem;
-
-	$height-button-big: 3.25rem;
-	$font-size-button-big: 1.25rem;
-
 	position: relative;
 
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	gap: 0.5rem;
 
-	min-height: 2.875rem;
-	padding: 0.5rem 1.5rem;
+	min-height: 2.75rem;
+	padding: 0.6rem 1.25rem;
 
 	font-family: var(--font-family-secondary);
 	font-weight: 600;
 	font-size: 1rem;
-	line-height: 100%;
+	line-height: 1.1;
+	white-space: nowrap;
 
-	border: none;
-	border-radius: 3px;
+	border: 1px solid transparent;
+	border-radius: var(--radius-md, 0.5rem);
 
-    transition: all var(--timing-faster) ease-in-out;
-
-    box-shadow: var(--raised-z8);
+	transition: background-color var(--timing-faster) ease,
+		color var(--timing-faster) ease,
+		border-color var(--timing-faster) ease,
+		box-shadow var(--timing-faster) ease,
+		transform var(--timing-faster) ease;
 
 	user-select: none;
 	cursor: pointer;
 	outline: none;
+	text-decoration: none;
 
-	&.-pill {
-		border-radius: 999px;
-	}
+	&.-pill { border-radius: 999px; }
 
 	&.-small {
-		min-height: $height-button-small;
-		font-size: $font-size-button-small;
+		min-height: 2.25rem;
+		padding: 0.4rem 0.9rem;
+		font-size: 0.875rem;
 	}
 
 	&.-big {
-		min-height: $height-button-big;
-		font-size: $font-size-button-big;
+		min-height: 3.25rem;
+		padding: 0.85rem 1.85rem;
+		font-size: 1.125rem;
 	}
+
+	&.-fluid { width: 100%; }
 
 	&.-loading {
 		color: transparent;
@@ -67,10 +61,6 @@ $components-colors: (
 			animation: spinAround 0.48s infinite linear;
 		}
 	}
-
-	&.-fluid {
-		width: 100%;
-	}
 }
 
 .#{$prefix}button {
@@ -78,226 +68,93 @@ $components-colors: (
 
 	color: var(--color-light-primary);
 	background-color: var(--color-primary-500);
-
-	&:focus {
-		box-shadow: 0 0 0 .175rem rgba(255, 255, 255, 0.15);
-	}
+	box-shadow: 0 1px 2px hsla(335, 80%, 24%, 0.28);
 
 	&:hover {
 		background-color: var(--color-primary-600);
 	}
 
-	&.-loading {
-		color: transparent;
-
-		&:after {
-			border-right-color: var(--color-light-primary);
-			border-top-color: var(--color-light-primary);
-		}
+	&:active {
+		transform: translateY(1px);
 	}
 
-	@each $key, $value in $components-colors {
-		&.-#{$key} {
-			color: var(--color-light-primary);
-			background-color: var(--color-#{$key}-500);
-
-			&:focus {
-				box-shadow: 0 0 0 .175rem rgba(255, 255, 255, 0.15);
-			}
-
-			&:hover {
-				background-color: var(--color-#{$key}-600);
-			}
-
-			&.-loading {
-				color: transparent;
-
-				&:after {
-					border-right-color: var(--color-light-primary);
-					border-top-color: var(--color-light-primary);
-				}
-			}
-
-			&.-secondary {
-				color: var(--color-#{$key}-600);
-				background: transparent;
-
-				&:hover {
-					background-color: var(--color-#{$key}-100);
-				}
-
-				&.-loading {
-					color: transparent;
-
-					&:after {
-						border-right-color: var(--color-#{$key}-600);
-						border-top-color: var(--color-#{$key}-600);
-					}
-				}
-			}
-
-			&.-tertiary {
-				color: var(--color-#{$key}-600);
-				border: none;
-				background: transparent;
-				box-shadow: none;
-
-				&:hover {
-					background-color: var(--color-#{$key}-200);
-				}
-
-				&.-loading {
-					color: transparent;
-
-					&:after {
-						border-right-color: var(--color-#{$key}-600);
-						border-top-color: var(--color-#{$key}-600);
-					}
-				}
-			}
-
-			&.-outline {
-				color: var(--color-#{$key}-600);
-				border: 1px solid var(--color-#{$key}-600);
-				background-color: transparent;
-				box-shadow: none;
-
-				&:hover {
-					color: var(--color-#{$key}-100);
-					background-color: var(--color-#{$key}-400);
-				}
-
-				&.-loading {
-					color: transparent;
-
-					&:after {
-						border-right-color: var(--color-#{$key}-600);
-						border-top-color: var(--color-#{$key}-600);
-					}
-				}
-			}
-		}
-
-		&.-white {
-			color: var(--color-primary-600);
-			background-color: white;
-
-			&:focus {
-				box-shadow: 0 0 0 .175rem rgba(255, 255, 255, 0.15);
-			}
-
-			&:hover {
-				background-color: var(--color-gray-100);
-			}
-
-			&.-loading {
-				color: transparent;
-
-				&:after {
-					border-right-color: var(--color-primary-600);
-					border-top-color: var(--color-primary-600);
-				}
-			}
-
-			&.-secondary {
-				color: white;
-				background: transparent;
-				border: 1px solid white;
-
-				&:hover {
-					background-color: transparent;
-				}
-
-				&:focus {
-					box-shadow: 0 0 0 .175rem rgba(255, 255, 255, 0.15);
-				}
-
-				&.-loading {
-					color: transparent;
-
-					&:after {
-						border-right-color: white;
-						border-top-color: white;
-					}
-				}
-			}
-
-			&.-tertiary {
-				color: var(--color-primary-600);
-				border: none;
-				background: transparent;
-
-				&:hover {
-					background-color: var(--color-gray-100);
-				}
-
-				&.-loading {
-					color: transparent;
-
-					&:after {
-						border-right-color: var(--color-primary-600);
-						border-top-color: var(--color-primary-600);
-					}
-				}
-			}
-		}
+	&:focus-visible {
+		box-shadow: 0 0 0 3px hsla(335, 80%, 53%, 0.3);
 	}
 
+	&.-loading:after {
+		border-right-color: var(--color-light-primary);
+		border-top-color: var(--color-light-primary);
+	}
+
+	/* Hairline button for "Paper" surfaces. */
 	&.-secondary {
-		color: var(--color-primary-500);
-		border: 1px solid var(--color-gray-300);
+		color: var(--color-content);
 		background: transparent;
+		border-color: var(--color-line-strong);
+		box-shadow: none;
 
 		&:hover {
-			background-color: var(--color-gray-100);
+			background-color: var(--color-base-soft);
+			border-color: var(--color-primary-400);
+			color: var(--color-primary-600);
+		}
+	}
+
+	&.-tertiary {
+		color: var(--color-primary-600);
+		background: transparent;
+		border-color: transparent;
+		box-shadow: none;
+
+		&:hover {
+			background-color: var(--color-primary-100);
+		}
+	}
+
+	&.-outline {
+		color: var(--color-primary-600);
+		background: transparent;
+		border-color: var(--color-primary-500);
+		box-shadow: none;
+
+		&:hover {
+			background-color: var(--color-primary-100);
+		}
+	}
+
+	/* On dark "Ink" / magenta bands. */
+	&.-white {
+		color: var(--color-primary-600);
+		background-color: #fff;
+		box-shadow: var(--raised-z3);
+
+		&:hover {
+			background-color: var(--color-base-soft);
 		}
 
-		&.-disabled {
-			color: var(--color-gray-400);
-			border: 1px solid var(--color-gray-300);
-			background-color: transparent;
+		&.-secondary {
+			color: #fff;
+			background: transparent;
+			border-color: hsla(0, 0%, 100%, 0.5);
+			box-shadow: none;
 
 			&:hover {
-				background-color: transparent;
-			}
-		}
-
-		&.-loading {
-			color: transparent;
-
-			&:after {
-				border-right-color: var(--color-primary-600);
-				border-top-color: var(--color-primary-600);
-			}
-		}
-
-		&.-disabled {
-			&.-loading {
-				&:after {
-					border-right-color: var(--color-gray-500);
-					border-top-color: var(--color-gray-500);
-				}
+				background-color: hsla(0, 0%, 100%, 0.12);
+				border-color: #fff;
 			}
 		}
 	}
 
 	&.-disabled {
-		background-color: var(--color-gray-200);
+		color: var(--color-content-muted);
+		background-color: var(--color-line);
+		border-color: transparent;
+		box-shadow: none;
 		cursor: not-allowed;
 
-		&:not(.-loading) {
-			color: var(--color-gray-500);
-		}
-
-		&.-loading {
-			&:after {
-				border-right-color: var(--color-gray-500);
-				border-top-color: var(--color-gray-500);
-			}
-		}
-
 		&:hover {
-			background-color: var(--color-gray-300);
+			background-color: var(--color-line);
 		}
 	}
 }
@@ -307,7 +164,7 @@ $components-colors: (
 	to   { transform: rotate(359deg); }
 }
 
-.moon-input {
+.#{$prefix}input {
 	&.moon-input-icon-wrap {
 		position: relative;
 		width: fit-content;

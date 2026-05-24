@@ -5,83 +5,88 @@
 
 	margin-top: 1rem;
 
+	background: var(--color-base);
+	border: 1px solid var(--color-line);
+	border-radius: var(--radius-lg, 0.875rem);
+	box-shadow: var(--raised-z1);
+
 	.row {
 		cursor: pointer;
 
 		&:hover {
-			background-color: rgba(247, 247, 247, 0.8);
+			background-color: var(--color-base-soft);
 		}
 	}
 }
 
 .#{$prefix}table {
-	overflow-x: auto;
-	overflow-y: visible;
-
 	width: 100%;
 	max-width: 100%;
 
 	word-break: normal;
-
-	border-collapsed: collapsed;
+	border-collapse: collapse;
 	border-spacing: 0;
 
-	thead {
-        font-size: 14px;
-        background: var(--color-neutral-400);
+	font-size: var(--font-size-300);
+
+	thead th {
+		padding: 0.9rem 1rem;
+
+		font-size: var(--font-size-200);
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: var(--color-content-muted);
+
+		background: var(--color-base-soft);
+		border-bottom: 1px solid var(--color-line);
+		vertical-align: middle;
 	}
 
-	td, th {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+	tbody td {
+		padding: 0.85rem 1rem;
 
 		vertical-align: middle;
-		text-align: left;
-
-        &:first-child {
-			padding-left: .75rem;
-        }
-
-        &:last-child {
-            padding-right: .75rem;
-        }
-
-		&:not(:first-child){
-			padding-left: 2rem;
-		}
+		color: var(--color-content);
+		border-top: 1px solid var(--color-line);
 	}
 
-	&.-ruled {
-		tbody tr td {
-			border-top: 1px solid var(--color-neutral-400);
-		}
+	tbody tr:first-child td {
+		border-top: 0;
+	}
 
-		thead tr {
-			padding-left: .75rem;
-			padding-right: .75rem;
-		}
+	tbody tr:hover {
+		background: var(--color-base-soft);
+	}
+
+	/* Price + free-tier columns read as machine data. */
+	td:nth-child(3),
+	td:nth-child(4) {
+		font-family: var(--font-family-mono);
+		font-variant-numeric: tabular-nums;
+		font-size: var(--font-size-200);
+	}
+
+	td:first-child {
+		font-weight: 600;
 	}
 
 	&.-striped {
 		tbody tr:nth-child(even) {
-			background-color: var(--color-neutral-500);
+			background-color: var(--color-base-soft);
 		}
 	}
 
 	.collapsed {
 		width: 1%;
-    }
+	}
 
-    .table-action-container {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: .5rem;
-        justify-content: end;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
-
-.has-table-action {
-    padding-bottom: 70px;
+	.table-action-container {
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: .5rem;
+		justify-content: end;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 }

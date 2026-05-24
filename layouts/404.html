@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>404 Not Found</title>
-  </head>
-  <body>
-    <center><h1>404 Not Found</h1></center>
-    <hr>
-    <center>Deploys.app</center>
-  </body>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>404 — Page not found · Deploys.app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/webp" href="/favicon.webp">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..800&display=swap">
+	<style>
+		:root {
+			--ink: hsl(230, 28%, 7%);
+			--content: hsl(220, 40%, 94%);
+			--muted: hsl(220, 18%, 68%);
+			--primary: hsl(335, 80%, 53%);
+			--primary-active: hsl(335, 80%, 46%);
+			--accent: hsl(189, 86%, 50%);
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 2rem;
+			text-align: center;
+
+			font-family: 'Hanken Grotesk', -apple-system, system-ui, sans-serif;
+			color: var(--content);
+
+			background-color: var(--ink);
+			background-image:
+				linear-gradient(to right, hsla(220, 40%, 92%, 0.04) 1px, transparent 1px),
+				linear-gradient(to bottom, hsla(220, 40%, 92%, 0.04) 1px, transparent 1px);
+			background-size: 44px 44px;
+		}
+
+		.code {
+			font-size: 6rem;
+			font-weight: 800;
+			line-height: 1;
+			letter-spacing: -0.02em;
+			background: linear-gradient(135deg, var(--primary), var(--accent));
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+		}
+
+		h1 {
+			margin: 0.5rem 0 0.25rem;
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+
+		p {
+			margin: 0 0 1.75rem;
+			color: var(--muted);
+		}
+
+		a {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.7rem 1.4rem;
+			border-radius: 0.5rem;
+			background: var(--primary);
+			color: #fff;
+			text-decoration: none;
+			font-weight: 600;
+			transition: background 0.16s ease;
+		}
+
+		a:hover { background: var(--primary-active); }
+	</style>
+</head>
+<body>
+	<div>
+		<div class="code">404</div>
+		<h1>Page not found</h1>
+		<p>The page you're looking for doesn't exist or has moved.</p>
+		<a href="/">Back to home</a>
+	</div>
+</body>
 </html>

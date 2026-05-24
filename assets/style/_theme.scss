@@ -2,35 +2,39 @@
  * Color
  *********************************************/
  :root {
-    --color-primary-100: hsl(342, 80%, 95%);
-    --color-primary-200: hsl(342, 80%, 92%);
-    --color-primary-300: hsl(342, 80%, 88%);
-    --color-primary-400: hsl(342, 80%, 64%);
-    --color-primary-500: hsl(342, 80%, 58%);
-    --color-primary-600: hsl(342, 80%, 54%);
-    --color-primary-700: hsl(342, 66%, 44%);
-    --color-primary-800: hsl(342, 66%, 38%);
-    --color-primary-900: hsl(342, 66%, 31%);
+    /* Primary — console "signal" magenta */
+    --color-primary-100: hsl(335, 80%, 96%);
+    --color-primary-200: hsl(335, 80%, 92%);
+    --color-primary-300: hsl(335, 76%, 85%);
+    --color-primary-400: hsl(335, 85%, 64%);
+    --color-primary-500: hsl(335, 80%, 53%);
+    --color-primary-600: hsl(335, 80%, 46%);
+    --color-primary-700: hsl(335, 72%, 38%);
+    --color-primary-800: hsl(335, 72%, 31%);
+    --color-primary-900: hsl(335, 72%, 25%);
 
-    --color-secondary-100: hsl(207, 85%, 94%);
-    --color-secondary-200: hsl(207, 85%, 90%);
-    --color-secondary-300: hsl(207, 85%, 86%);
-    --color-secondary-400: hsl(207, 100%, 48%);
-    --color-secondary-500: hsl(207, 100%, 43%);
-    --color-secondary-600: hsl(207, 100%, 38%);
-    --color-secondary-700: hsl(207, 95%, 29%);
-    --color-secondary-800: hsl(207, 95%, 24%);
-    --color-secondary-900: hsl(207, 95%, 20%);
+    /* Secondary — console accent cyan */
+    --color-secondary-100: hsl(190, 85%, 94%);
+    --color-secondary-200: hsl(190, 85%, 88%);
+    --color-secondary-300: hsl(190, 80%, 80%);
+    --color-secondary-400: hsl(189, 86%, 50%);
+    --color-secondary-500: hsl(189, 88%, 42%);
+    --color-secondary-600: hsl(189, 88%, 35%);
+    --color-secondary-700: hsl(189, 80%, 28%);
+    --color-secondary-800: hsl(189, 80%, 23%);
+    --color-secondary-900: hsl(189, 80%, 19%);
 
-	--color-neutral-100: hsl(226, 30%, 52%);
-	--color-neutral-200: hsl(226, 30%, 46%);
-    --color-neutral-300: hsl(226, 30%, 40%);
-	--color-neutral-400: hsl(226, 36%, 28%);
-	--color-neutral-500: hsl(226, 36%, 25%);
-    --color-neutral-600: hsl(226, 36%, 20%);
-	--color-neutral-700: hsl(226, 39%, 17%);
-	--color-neutral-800: hsl(226, 39%, 15%);
-	--color-neutral-900: hsl(226, 39%, 11%);
+    /* Neutral — console base (hue 230). High numbers = darker "Ink"
+       surfaces; 400/500 are dark text/labels for light "Paper" sections. */
+	--color-neutral-100: hsl(230, 16%, 64%);
+	--color-neutral-200: hsl(230, 14%, 52%);
+    --color-neutral-300: hsl(230, 12%, 44%);
+	--color-neutral-400: hsl(230, 12%, 38%);
+	--color-neutral-500: hsl(230, 26%, 14%);
+    --color-neutral-600: hsl(230, 20%, 13%);
+	--color-neutral-700: hsl(230, 28%, 7%);
+	--color-neutral-800: hsl(230, 28%, 6%);
+	--color-neutral-900: hsl(230, 32%, 4%);
 
 	--color-positive-100: hsl(163, 75%, 95%);
 	--color-positive-200: hsl(163, 75%, 90%);
@@ -72,10 +76,25 @@
 	--color-warning-800: hsl(48, 90%, 30%);
 	--color-warning-900: hsl(48, 90%, 27%);
 
-	--color-light-primary: hsl(228, 100%, 99%);
-	--color-light-secondary: hsl(227, 46%, 73%);
-	--color-dark-primary: hsla(215, 15%, 28%, 0.96);
-	--color-dark-secondary: hsla(220, 10%, 47%, 0.95);
+	--color-light-primary: hsl(220, 40%, 96%);
+	--color-light-secondary: hsl(220, 22%, 72%);
+	--color-dark-primary: hsl(230, 26%, 16%);
+	--color-dark-secondary: hsl(230, 12%, 45%);
+
+	/* Semantic tokens — console "Paper" (light) + "Ink" (dark) surfaces.
+	   Sections opt into one or the other; these keep usage readable. */
+	--color-content: hsl(230, 26%, 14%);        /* primary text on Paper */
+	--color-content-muted: hsl(230, 12%, 45%);  /* secondary text on Paper */
+	--color-content-inv: hsl(220, 40%, 94%);    /* primary text on Ink */
+	--color-content-inv-muted: hsl(220, 18%, 68%); /* secondary text on Ink */
+	--color-base: hsl(0, 0%, 100%);             /* Paper surface */
+	--color-base-soft: hsl(240, 24%, 98%);      /* Paper, recessed */
+	--color-ink: hsl(230, 28%, 7%);             /* Ink surface */
+	--color-ink-soft: hsl(230, 20%, 13%);       /* Ink, raised panel */
+	--color-line: hsl(240, 16%, 90%);           /* hairline on Paper */
+	--color-line-strong: hsl(240, 16%, 84%);
+	--color-line-dark: hsl(230, 16%, 22%);      /* hairline on Ink */
+	--color-accent-500: hsl(189, 86%, 45%);
 
 	// Secondary Palette
 	--color-golden-poppy: hsl(47, 99%, 50%);
@@ -90,8 +109,9 @@
  * Font family
  *********************************************/
 :root {
-	--font-family-primary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-	--font-family-secondary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--font-family-primary: 'Hanken Grotesk', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--font-family-secondary: 'Hanken Grotesk', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--font-family-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'SFMono-Regular', Menlo, monospace;
 }
 
 /*
@@ -127,7 +147,9 @@
  *********************************************/
 :root {
 	--font-weight-default: 400;
+	--font-weight-strong: 600;
 	--font-weight-bold: 600;
+	--font-weight-heading: 700;
 	--font-weight-bolder: 700;
 }
 
