@@ -8,7 +8,7 @@
 					Deploy and run containers with confidence.
 				</h1>
 				<p class="_fs-500 _fw-500 _cl-content-inv-muted _mgbt-48px">Deploys.app is a Kubernetes-based platform-as-a-service for running containerized workloads in the cloud.</p>
-				<a class="moon-button _als-fst-lg _als-ct" href="/#price">View pricing</a>
+				<a class="button _als-fst-lg _als-ct" href="/#price">View pricing</a>
 			</div>
 			<div class="_mgt-16px">
 				<img class="_w-100pct" src="{{ (resources.Get "image/database.svg" | resources.Fingerprint).RelPermalink }}" alt="Server Architecture">
@@ -161,7 +161,7 @@
 				<p class="_cl-content-inv-muted _mgbt-32px">
 					Deploy your workloads across multiple regions, with additional locations coming soon.
 				</p>
-				<a class="moon-button _als-fst" href="https://console.deploys.app">Get started</a>
+				<a class="button _als-fst" href="https://console.deploys.app">Get started</a>
 			</div>
 		</div>
 	</div>
@@ -179,10 +179,10 @@
 			</p>
 		</div>
 		<div>
-			<div class="moon-table-container">
+			<div class="table-container">
 				{{$p := ((resources.GetRemote "https://api.deploys.app/billing.skus") | transform.Unmarshal).result}}
 				{{$m := mul 60 60 24 30}}
-				<table class="moon-table">
+				<table class="table">
 					<thead>
 					<tr>
 						<th class="_tal-ct">RESOURCE</th>
@@ -289,7 +289,7 @@
 				<p class="_cl-white _tal-ct">30-day money-back guarantee — no questions asked.</p>
 			</div>
 			<div class="_dp-f _fdrt-cl _jtfct-ct _mgt-16px _mgt-0px-lg">
-				<a class="moon-button _als-ct _als-fe-lg _cl-primary-500 _bgcl-white" href="mailto:contact@moonrhythm.io">Contact us</a>
+				<a class="button _als-ct _als-fe-lg _cl-primary-500 _bgcl-white" href="mailto:contact@moonrhythm.io">Contact us</a>
 			</div>
 		</div>
 	</div>
