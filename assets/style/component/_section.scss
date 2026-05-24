@@ -5,27 +5,47 @@ section.section {
 }
 
 .section-hero {
-	min-height: 650px;
-	height: 100vh;
-	background-color: var(--color-neutral-700);
-	padding-top: 100px;
+	min-height: 88vh;
+	background-color: var(--color-ink);
+	background-image:
+		linear-gradient(to right, hsla(220, 40%, 92%, 0.04) 1px, transparent 1px),
+		linear-gradient(to bottom, hsla(220, 40%, 92%, 0.04) 1px, transparent 1px);
+	background-size: 44px 44px;
+	padding-top: 120px;
+	padding-bottom: 60px;
+	overflow: hidden;
 
 	@include mqmw('md') {
 		text-align: center;
-		padding: 150px 0 30px;
-		height: auto;
+		padding: 130px 0 48px;
+		min-height: auto;
 	}
 }
 
+/* A soft magenta glow bleeding up from the hero floor — control-room vibe. */
+.section-hero:before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -40%;
+	width: 80%;
+	height: 80%;
+	transform: translateX(-50%);
+	background: radial-gradient(closest-side, hsla(335, 80%, 53%, 0.16), transparent 70%);
+	pointer-events: none;
+}
+
 .section-feature {
-	padding: 120px 0;
+	padding: 110px 0;
+	background-color: var(--color-base);
 }
 
 .section-plan {
-	padding: 120px 0;
+	padding: 110px 0;
+	background-color: var(--color-base);
 }
 
 .section-cta {
-	background-color: hsl(353, 84%, 70%);
-	padding: 50px 0;
+	background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+	padding: 64px 0;
 }
