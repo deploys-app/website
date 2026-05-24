@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing site for Deploys.app (a Kubernetes-based PaaS), built with **Hugo extended 0.137.1** (pinned via `.tool-versions` — use `asdf install`). Deploys as a static site to Cloudflare Pages (see `static/_headers`).
+Marketing site for Deploys.app (a Kubernetes-based PaaS), built with **Hugo extended 0.161.1** (pinned via `.tool-versions` — use `asdf install`). Deploys as a static site to Cloudflare Pages (see `static/_headers`).
 
 ## Commands
 
