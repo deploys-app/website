@@ -2,6 +2,16 @@
  * Layout primitives
  *********************************************/
 
+/* Inline SVG icons (replaces the Font Awesome web font). Scales with
+ * font-size and inherits color via currentColor. */
+.icon {
+	display: inline-block;
+	width: auto;
+	height: 1em;
+	vertical-align: -0.125em;
+	fill: currentColor;
+}
+
 /* Centered, breakpoint-capped content width. */
 .container {
 	width: 100%;

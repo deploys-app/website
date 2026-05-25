@@ -41,9 +41,12 @@
 
 		transition: background var(--timing-faster) ease, color var(--timing-faster) ease;
 
-		i,
-		svg {
-			font-size: 1.35rem;
+		/* Uniform square footprint so every icon gets equal padding in the
+		 * tile, regardless of its SVG aspect ratio. */
+		.icon {
+			font-size: 1.5rem;
+			width: 1em;
+			height: 1em;
 		}
 	}
 
@@ -90,9 +93,10 @@
 		background: var(--color-primary-100);
 		color: var(--color-primary-600);
 
-		i,
-		svg {
-			font-size: 1.25rem;
+		.icon {
+			font-size: 1.3rem;
+			width: 1em;
+			height: 1em;
 		}
 	}
 
