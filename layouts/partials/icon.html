@@ -1,0 +1,11 @@
+{{- /* Inline an SVG icon from assets/icons/<style>/<name>.svg.
+       Usage: {{ partial "icon" "light/server" }} */ -}}
+{{- $svg := resources.Get (printf "icons/%s.svg" .) -}}
+{{- with $svg -}}
+	{{- $out := .Content -}}
+	{{- $out = $out | replaceRE `<!--.*?-->` "" -}}
+	{{- $out = $out | replaceRE `<svg ` `<svg class="icon" aria-hidden="true" focusable="false" fill="currentColor" ` -}}
+	{{- $out | safeHTML -}}
+{{- else -}}
+	{{- errorf "icon partial: assets/icons/%s.svg not found" . -}}
+{{- end -}}

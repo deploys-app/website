@@ -17,7 +17,7 @@ There are no tests, linters, or JS toolchain. Hugo invokes Dart Sass for SCSS vi
 
 ### Content vs. layouts
 
-Most of the site is **not** content-driven. The homepage (`/`) is hand-authored in `layouts/index.html` — sections (hero, features, pricing, CTA) are hard-coded HTML, not loops over content files. The only Markdown content lives in `content/privacy-policy/index.md` and renders through `layouts/_default/single.html`. `layouts/_default/baseof.html` is the shared shell (head, font-awesome CDN, compiled SCSS, navbar partial). New marketing copy on the homepage means editing `layouts/index.html` directly.
+Most of the site is **not** content-driven. The homepage (`/`) is hand-authored in `layouts/index.html` — sections (hero, features, pricing, CTA) are hard-coded HTML, not loops over content files. The only Markdown content lives in `content/privacy-policy/index.md` and renders through `layouts/_default/single.html`. `layouts/_default/baseof.html` is the shared shell (head, Google Fonts, compiled SCSS, navbar partial). New marketing copy on the homepage means editing `layouts/index.html` directly.
 
 Taxonomies are disabled in `config.yaml` (`disableKinds: [taxonomy]` + the matching `ignoreErrors`); don't reintroduce them without updating both keys.
 
@@ -44,7 +44,9 @@ No bundler, no framework. Two scripts are used:
 - **hyperscript** (loaded from unpkg in `baseof.html`) — inline `_="on click ..."` attributes drive small interactions (e.g. navbar toggle in `layouts/partials/navbar.html`).
 - A small inline `<script>` in `navbar.html` adds the scroll-fixed navbar behavior.
 
-Font Awesome Pro CSS is loaded from `cdn.moonrhythm.io`.
+### Icons
+
+Icons are **inline SVG**, not a web font. The `icon` partial reads `assets/icons/<style>/<name>.svg` (sourced from Font Awesome Pro), strips the license comment, injects `class="icon" fill="currentColor" aria-hidden="true"`, and emits it inline: `{{ partial "icon" "light/server" }}`. The `.icon` class (in `_layout.scss`) sizes via `height: 1em` and inherits `color` through `currentColor`, so icons scale with `font-size` and recolor on hover. To add an icon, drop its SVG in `assets/icons/<style>/` and reference it. There is no Font Awesome CSS/web-font request.
 
 ### Static assets and caching
 
