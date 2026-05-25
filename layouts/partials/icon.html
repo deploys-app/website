@@ -1,5 +1,5 @@
 {{- /* Inline an SVG icon from assets/icons/<style>/<name>.svg.
-       Usage: {{ partial "icon" "light/server" }} */ -}}
+       Usage: {{ partial "icon" "light/globe" }} */ -}}
 {{- $svg := resources.Get (printf "icons/%s.svg" .) -}}
 {{- with $svg -}}
 	{{- $out := .Content -}}
