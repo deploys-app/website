@@ -40,6 +40,14 @@
 		}
 	}
 
+	/* The centered bar holding logo + toggle + menu. */
+	.navbar-bar {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
 	.nav-link {
 		display: inline-flex;
 		align-items: center;
@@ -52,6 +60,11 @@
 
 	.nav-link:hover {
 		color: var(--nav-fg-hover);
+	}
+
+	.navbar-cta {
+		display: flex;
+		justify-content: center;
 	}
 
 	.navbar-menu-container {
@@ -166,6 +179,10 @@
 		user-select: none;
 
 		margin-right: -.75rem;
+
+		i {
+			font-size: 1.5rem;
+		}
 
 		.navbar-toggle-container {
 			display: flex;

@@ -165,7 +165,7 @@
 }
 
 .#{$prefix}input {
-	&.moon-input-icon-wrap {
+	&.input-icon-wrap {
 		position: relative;
 		width: fit-content;
 		user-select: none;
@@ -174,7 +174,7 @@
 			padding-right: 35px;
 		}
 
-		.moon-input-icon {
+		.input-icon {
 			position: absolute;
 			top: 50%;
 			right: 25px;

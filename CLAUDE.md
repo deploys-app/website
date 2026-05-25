@@ -21,20 +21,22 @@ Most of the site is **not** content-driven. The homepage (`/`) is hand-authored 
 
 Taxonomies are disabled in `config.yaml` (`disableKinds: [taxonomy]` + the matching `ignoreErrors`); don't reintroduce them without updating both keys.
 
-### Styling system (custom atomic CSS)
+### Styling system (semantic SCSS)
 
-`assets/style/` is a bespoke utility-first CSS framework, compiled by Hugo Pipes (`css.Sass | resources.Minify | resources.Fingerprint`). The structure is layered and the order in `main.scss` is load-bearing — `theme` defines CSS custom properties that the atomic classes consume.
+`assets/style/` is hand-authored **semantic** SCSS compiled by Hugo Pipes (`css.Sass | resources.Minify | resources.Fingerprint`). There is no utility/atomic framework — markup uses meaningful class names whose styles live in SCSS. Import order in `main.scss` is load-bearing: `function/breakpoint` → `theme` → `reset` → `fonts` → `layout` → `component/all` → `home`.
 
-- `atomic/` — single-property utilities prefixed with `_` (the `$atom-prefix` in `atomic/config.scss`). Naming is abbreviated: `_mgbt-16px` (margin-bottom), `_dp-f` (display:flex), `_cl-neutral-500` (color), `_fs-700` (font-size), `_gg-16px` (grid-gap), `_jtfct-spbtw` (justify-content:space-between), `_pdt-70px` (padding-top), `_als-ct` (align-self:center). Every atomic also auto-generates breakpoint variants: `_dp-n-lg` = `display:none` at `lg` and up.
-- `layout/` — `lo-container`, `lo-12`/`lo-6-md`/`lo-4-lg` grid spans. The grid is mobile-first with `-md`/`-lg` overrides.
-- `component/` — `moon-*` and named components: `moon-navbar`, `moon-button`, `fancy-box`, `fancy-icon`, `section`, etc.
-- `utility/`, `mixins/`, `function/` — animation helpers, typography, breakpoint mixin.
+- `_theme.scss` — design tokens (see below).
+- `_layout.scss` — `.container` (centered, breakpoint-capped content width).
+- `_home.scss` — marketing-page layout/typography: `.hero-grid` / `.hero-title` / `.hero-lead`, `.section-heading` (`-center` / `-invert` / `-xl` modifiers), `.section-lead`, `.feature-grid`, `.section-split` + `.split-grid` (`-flip-lg`) + `.split-media` / `.split-body`, `.section-regions`, `.cta-grid` / `.cta-title`, etc.
+- `component/` — unprefixed component classes (`$prefix` is empty): `button`, `navbar` (+ `navbar-bar`, `nav-link`, `navbar-menu*`), `table` (+ `-center`, `.note`), `panel`, `fancy-box` / `fancy-box-2` / `fancy-icon` (feature cards), `section-*`, `link`, `content` (markdown `pre`/`code`), etc.
+- `function/` — `mq` / `mqmw` breakpoint mixins (`$breakpoints` map lives in `main.scss`: sm 768 / md 1024 / lg 1200).
+- `.u-grid-ink` (in `main.scss`) is the faint blueprint-grid background for dark "Ink" sections.
 
-When adding styles, prefer composing existing atomics in markup over writing new CSS. Reach for a new component class only when a pattern repeats and needs semantic naming.
+When adding styles, write a semantic class in the relevant SCSS file and reference the design tokens — don't reintroduce single-purpose utility classes in markup.
 
 ### Theme tokens
 
-`assets/style/_theme.scss` defines all color/spacing/typography as CSS custom properties (`--color-primary-500`, `--color-neutral-700`, etc.). `atomic/config.scss` maps these into `$colors`/`$spacings`/etc. so atomic classes resolve to the CSS variables. To add a color or size scale, add it in `_theme.scss` and the corresponding map in `atomic/config.scss`.
+`assets/style/_theme.scss` defines all color/spacing/typography as CSS custom properties, aligned to the **console's design system** — magenta `--color-primary-*` on console "Ink" (dark) / "Paper" (light) surfaces, plus semantic `--color-content` / `--color-base` / `--color-ink` / `--color-line` tokens. Component and page classes reference these vars directly. Fonts are Hanken Grotesk (UI/display) + JetBrains Mono (machine data), loaded from Google Fonts in `baseof.html`. To add a color/size, add the custom property in `_theme.scss` and reference it from the relevant SCSS rule.
 
 ### Interactivity
 
