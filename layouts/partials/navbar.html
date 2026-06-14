@@ -3,8 +3,7 @@
 		<a href="/">
 			<img src="{{ (resources.Get "image/logo.webp" | resources.Fingerprint).RelPermalink }}" height="50" alt="Deploys.app">
 		</a>
-		<div id="nav-toggle" class="navbar-toggle" tabindex="0" role="button"
-			 _="on click toggle .active on #nav-menu-container">
+		<div id="nav-toggle" class="navbar-toggle" tabindex="0" role="button">
 			<div class="navbar-toggle-container">
 				{{ partial "icon" "light/bars" }}
 			</div>
@@ -12,29 +11,20 @@
 		<div id="nav-menu-container" class="navbar-menu-container">
 			<ul class="navbar-menus">
 				<li class="navbar-menu">
-					<a class="nav-link"
-					   href="/"
-					   _="on click remove .active from #nav-menu-container">Home</a>
+					<a class="nav-link" href="/">Home</a>
 				</li>
 				<li class="navbar-menu">
-					<a class="nav-link"
-					   href="/#feature"
-					   _="on click remove .active from #nav-menu-container">Features</a>
+					<a class="nav-link" href="/#feature">Features</a>
 				</li>
 				<li class="navbar-menu">
-					<a class="nav-link"
-					   href="/#price"
-					   _="on click remove .active from #nav-menu-container">Prices</a>
+					<a class="nav-link" href="/#price">Prices</a>
 				</li>
 				<li class="navbar-menu">
-					<a class="nav-link"
-					   href="/privacy-policy">Privacy</a>
+					<a class="nav-link" href="/privacy-policy">Privacy</a>
 				</li>
 				<li class="navbar-menu">
 					<div class="navbar-cta">
-						<a class="button -small"
-						   href="https://console.deploys.app"
-						   _="on click remove .active from #nav-menu-container">Console</a>
+						<a class="button -small" href="https://console.deploys.app">Console</a>
 					</div>
 				</li>
 			</ul>
@@ -45,7 +35,18 @@
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
 		const nav = document.getElementById('nav')
+		const toggle = document.getElementById('nav-toggle')
 		const container = document.getElementById('nav-menu-container')
+
+		toggle.addEventListener('click', () => {
+			container.classList.toggle('active')
+		})
+
+		container.querySelectorAll('.nav-link, .navbar-cta a').forEach((link) => {
+			link.addEventListener('click', () => {
+				container.classList.remove('active')
+			})
+		})
 
 		let fixed = false
 		let scrolling = false

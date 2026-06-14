@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Marketing site for Deploys.app (a Kubernetes-based PaaS), built with **Hugo extended 0.161.1** (pinned via `.tool-versions` — use `asdf install`). Deploys as a static site to Cloudflare Pages (see `static/_headers`).
+Marketing site for Deploys.app (a Kubernetes-based PaaS), built with **Hugo extended 0.161.1** (pinned via `.tool-versions` — use `asdf install`). Deploys as a static site (see `static/_headers`).
 
 ## Commands
 
@@ -40,9 +40,7 @@ When adding styles, write a semantic class in the relevant SCSS file and referen
 
 ### Interactivity
 
-No bundler, no framework. Two scripts are used:
-- **hyperscript** (loaded from unpkg in `baseof.html`) — inline `_="on click ..."` attributes drive small interactions (e.g. navbar toggle in `layouts/partials/navbar.html`).
-- A small inline `<script>` in `navbar.html` adds the scroll-fixed navbar behavior.
+No bundler, no framework. A small inline `<script>` in `layouts/partials/navbar.html` handles all interactions — the mobile menu toggle, closing the menu on link clicks, and the scroll-fixed navbar behavior — using plain DOM APIs.
 
 ### Icons
 
@@ -50,4 +48,4 @@ Icons are **inline SVG**, not a web font. The `icon` partial reads `assets/icons
 
 ### Static assets and caching
 
-Long-lived assets go through Hugo's pipeline with `resources.Fingerprint` (cache-busted filenames). `static/_headers` sets `cache-control: public, max-age=31536000, immutable` for `/image/*`, `/style/*`, `/fonts/*` and adds `x-robots-tag: noindex` to `*.pages.dev` preview URLs — keep that header in place so previews stay out of search indexes.
+Long-lived assets go through Hugo's pipeline with `resources.Fingerprint` (cache-busted filenames). `static/_headers` sets `cache-control: public, max-age=31536000, immutable` for `/image/*`, `/style/*`, `/fonts/*`.

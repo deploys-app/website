@@ -1,5 +1,3 @@
-https://:project.pages.dev/*
-  x-robots-tag: noindex
 /*
   x-frame-options: DENY
   strict-transport-security: max-age=31536000; includeSubDomains; preload
