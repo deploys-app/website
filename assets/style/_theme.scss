@@ -21,6 +21,12 @@
 	--color-primary-800: hsl(335, 72%, 31%);
 	--color-primary-900: hsl(335, 72%, 25%);
 
+	/* Brand-tinted icon glyph (feature tiles). Points at primary-600 on Paper;
+	 * dark mode re-points it to the console's signal magenta (hsl 336 86% 60%)
+	 * so tile icons read the same as the console rather than the brighter
+	 * primary-600 used for text/fills on Ink. */
+	--color-icon-brand: var(--color-primary-600);
+
 	/* Accent — console cyan */
 	--color-accent-300: hsl(190, 80%, 80%);
 	--color-accent-400: hsl(189, 86%, 50%);
@@ -125,6 +131,9 @@ html.dark {
 	--color-primary-300: hsla(335, 80%, 55%, 0.36);
 	--color-primary-600: hsl(335, 85%, 72%);
 	--color-primary-700: hsl(335, 80%, 78%);
+
+	/* Match the console's dark signal magenta for brand-tinted icon glyphs. */
+	--color-icon-brand: hsl(336, 86%, 60%);
 
 	--color-shadow: 230 60% 2%;
 	--shadow-panel: 0 1px 2px hsl(var(--color-shadow) / 0.4), 0 8px 24px -12px hsl(var(--color-shadow) / 0.6);
