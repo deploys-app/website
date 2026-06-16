@@ -1,289 +1,315 @@
-{{define "main"}}
+{{ define "main" }}
+{{- $console := .Site.Params.consoleURL | default "https://console.deploys.app" -}}
+{{- $docs := .Site.Params.docsURL | default "https://docs.deploys.app" -}}
+<main id="main">
 
-<section class="section section-hero">
-	<div class="container">
-		<div class="hero-grid">
-			<div class="hero-copy">
-				<h1 class="hero-title">
-					Deploy and run containers with confidence.
-				</h1>
-				<p class="hero-lead">Deploys.app is a Kubernetes-based platform-as-a-service for running containerized workloads in the cloud.</p>
-				<a class="button hero-cta" href="/#price">View pricing</a>
-			</div>
-			<div class="hero-art">
-				<img src="{{ (resources.Get "image/database.svg" | resources.Fingerprint).RelPermalink }}" alt="Server Architecture">
-			</div>
-		</div>
-	</div>
-</section>
+	<!-- ============================ Hero ============================ -->
+	<section class="section hero u-grid-ink">
+		<div class="container">
+			<div class="hero-grid">
+				<div class="hero-copy">
+					<span class="u-kicker -inv">Kubernetes-based PaaS</span>
+					<h1 class="hero-title">Deploy and run containers<br>with <span class="signal">confidence.</span></h1>
+					<p class="hero-lead">
+						Deploys.app runs your web services, workers, scheduled jobs, and TCP apps on
+						managed Kubernetes — no nodes to babysit, no YAML to hand-roll. Push an image,
+						and we handle the rollout, routing, and TLS.
+					</p>
+					<div class="hero-actions">
+						<a class="button -primary -large" href="{{ $console }}">Start deploying {{ partial "icon" "arrow-right" }}</a>
+						<a class="button -ghost-inv -large" href="#pricing">View pricing</a>
+					</div>
+					<div class="hero-meta">
+						<div class="hero-meta-item"><span class="v">1s</span><span class="k">billing granularity</span></div>
+						<div class="hero-meta-item"><span class="v">TLS</span><span class="k">automatic HTTPS</span></div>
+						<div class="hero-meta-item"><span class="v">6+</span><span class="k">workload types</span></div>
+					</div>
+				</div>
 
-<section class="section section-feature" id="feature">
-	<div class="container">
-		<h2 class="section-heading -center">
-			Designed for developers.
-			<br>
-			Built for business.
-		</h2>
-		<div class="feature-grid">
-			<div class="fancy-box">
-				<div class="fancy-icon">
-					{{ partial "icon" "light/globe" }}
-				</div>
-				<h3>Web Service</h3>
-				<p>Run services that expose secure HTTPS endpoints to the internet.</p>
-			</div>
-			<div class="fancy-box">
-				<div class="fancy-icon">
-					{{ partial "icon" "light/network-wired" }}
-				</div>
-				<h3>TCP Service</h3>
-				<p>Run internal TCP services within your private network.</p>
-			</div>
-			<div class="fancy-box">
-				<div class="fancy-icon">
-					{{ partial "icon" "light/gears" }}
-				</div>
-				<h3>Worker</h3>
-				<p>Run long-running background workers and queue consumers.</p>
-			</div>
-			<div class="fancy-box">
-				<div class="fancy-icon">
-					{{ partial "icon" "light/clock" }}
-				</div>
-				<h3>Cron Job</h3>
-				<p>Run scheduled tasks on a flexible cron schedule.</p>
-			</div>
-			<div class="fancy-box">
-				<div class="fancy-icon">
-					{{ partial "icon" "light/hard-drive" }}
-				</div>
-				<h3>Stateful and Stateless</h3>
-				<p>Support both stateless and stateful workloads, backed by persistent SSD storage.</p>
-			</div>
-			<div class="fancy-box">
-				<div class="fancy-icon">
-					{{ partial "icon" "brands/docker" }}
-				</div>
-				<h3>Docker Registry</h3>
-				<p>Built-in private container registry for storing and distributing your images.</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="section section-split">
-	<div class="container">
-		<div class="split-grid">
-			<div class="split-media">
-				<img src="{{ (resources.Get "image/business1.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
-			</div>
-			<div class="split-body">
-				<h2 class="section-heading">
-					Solutions for
-					<br>
-					small businesses
-				</h2>
-				<p class="section-lead">
-					Run containers on shared Kubernetes nodes to minimize infrastructure costs.
-				</p>
-				<div class="fancy-box-2">
-					<div class="fancy-icon">
-						{{ partial "icon" "light/coins" }}
-					</div>
-					<div class="fancy-body">
-						<h4>Pay as you go</h4>
-						<p>Pay only for the resources you use — never for an entire server.</p>
-					</div>
-				</div>
-				<div class="fancy-box-2">
-					<div class="fancy-icon">
-						{{ partial "icon" "light/gauge-high" }}
-					</div>
-					<div class="fancy-body">
-						<h4>Move faster</h4>
-						<p>Integrate the Deploys.app CLI into your CI/CD pipeline for fully automated deployments.</p>
-					</div>
+				<div class="hero-art">
+					{{ partial "console-mock.html" . }}
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="section section-split">
-	<div class="container">
-		<div class="split-grid -flip-lg">
-			<div class="split-body">
-				<h2 class="section-heading">
-					Solutions for
-					<br>
-					enterprises
-				</h2>
-				<p class="section-lead">
-					Isolate workloads on dedicated nodes you control.
-				</p>
-				<div class="fancy-box-2">
-					<div class="fancy-icon">
-						{{ partial "icon" "light/boxes-stacked" }}
+	<!-- ========================== Features ========================= -->
+	<section class="section" id="features">
+		<div class="container">
+			<div class="section-head -center">
+				<span class="u-kicker">What you can run</span>
+				<h2 class="section-title">Designed for developers.<br>Built for business.</h2>
+				<p class="section-lead">Every workload type a modern app needs — each one a first-class primitive on the platform.</p>
+			</div>
+			<div class="card-grid">
+				<div class="card">
+					<span class="card-icon">{{ partial "icon" "globe" }}</span>
+					<span class="card-title">Web Service</span>
+					<span class="card-desc">Expose secure HTTPS endpoints to the internet, with TLS and routing handled for you.</span>
+				</div>
+				<div class="card">
+					<span class="card-icon">{{ partial "icon" "network" }}</span>
+					<span class="card-title">TCP Service</span>
+					<span class="card-desc">Run internal TCP services that talk to each other inside your private network.</span>
+				</div>
+				<div class="card">
+					<span class="card-icon">{{ partial "icon" "cog" }}</span>
+					<span class="card-title">Worker</span>
+					<span class="card-desc">Keep long-running background workers and queue consumers alive and healthy.</span>
+				</div>
+				<div class="card">
+					<span class="card-icon">{{ partial "icon" "clock" }}</span>
+					<span class="card-title">Cron Job</span>
+					<span class="card-desc">Run scheduled tasks on a flexible cron schedule, without standing up a scheduler.</span>
+				</div>
+				<div class="card">
+					<span class="card-icon">{{ partial "icon" "database" }}</span>
+					<span class="card-title">Stateful &amp; Stateless</span>
+					<span class="card-desc">Run both stateless and stateful workloads, backed by persistent SSD storage.</span>
+				</div>
+				<div class="card">
+					<span class="card-icon">{{ partial "icon" "container" }}</span>
+					<span class="card-title">Docker Registry</span>
+					<span class="card-desc">Store and distribute your images from a built-in private container registry.</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ========================= Quickstart ======================= -->
+	<section class="section -tight">
+		<div class="container">
+			<div class="quickstart-grid">
+				<div class="section-head -flush">
+					<span class="u-kicker">From zero to live</span>
+					<h2 class="section-title">One command<br>to production.</h2>
+					<p class="section-lead">Point the CLI at a project and location, and Deploys rolls it out — image pull, replicas, routing, and a public HTTPS URL.</p>
+				</div>
+				<div class="terminal" aria-hidden="true">
+					<div class="terminal-chrome">
+						<div class="terminal-dots"><i></i><i></i><i></i></div>
+						<span class="terminal-title">deploys&nbsp;cli</span>
 					</div>
-					<div class="fancy-body">
-						<h4>Allocated resources</h4>
-						<p>Dedicated resources reserved exclusively for your workloads, with lower per-unit pricing at scale.</p>
+<pre><span class="cmt"># authenticate once with a service-account key</span>
+<span class="pmpt">$</span> export DEPLOYS_AUTH_USER=<span class="arg">ci@acme.iam.deploys.app</span>
+<span class="pmpt">$</span> export DEPLOYS_AUTH_PASS=<span class="arg">$DEPLOYS_KEY</span>
+
+<span class="cmt"># build, push, and roll out a web service</span>
+<span class="pmpt">$</span> deploys deployment deploy <span class="flag">\</span>
+    <span class="flag">--project</span> <span class="arg">acme</span> <span class="flag">--location</span> <span class="arg">gke.cluster-rcf2</span> <span class="flag">\</span>
+    <span class="flag">--name</span> <span class="arg">web</span> <span class="flag">--image</span> <span class="arg">nginx:1.27</span> <span class="flag">--port</span> <span class="arg">80</span>
+
+<span class="ok">✓ live at https://web.acme.rcf2.deploys.app</span></pre>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ========================= Solutions ======================== -->
+	<section class="section" id="workloads">
+		<div class="container">
+			<div class="split">
+				<div class="split-body">
+					<span class="u-kicker">For small businesses</span>
+					<h2 class="section-title">Pay for what you run,<br>not for a server.</h2>
+					<p class="section-lead">Run containers on shared Kubernetes nodes and keep infrastructure costs proportional to real usage.</p>
+					<div class="panel -features">
+						<div class="feature-row">
+							<span class="feature-icon">{{ partial "icon" "coins" }}</span>
+							<div>
+								<h4>Pay as you go</h4>
+								<p>Per-second billing for CPU, memory, disk, and bandwidth — never for an entire idle machine.</p>
+							</div>
+						</div>
+						<div class="feature-row">
+							<span class="feature-icon">{{ partial "icon" "gauge" }}</span>
+							<div>
+								<h4>Move faster</h4>
+								<p>Drop the Deploys.app CLI into your CI/CD pipeline for fully automated deployments.</p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="fancy-box-2">
-					<div class="fancy-icon">
-						{{ partial "icon" "light/dharmachakra" }}
-					</div>
-					<div class="fancy-body">
-						<h4>Bring your own Kubernetes</h4>
-						<p>Run the Deploys.app Agent on your own Kubernetes cluster.</p>
+				<div class="split-media">
+					<div class="card-grid -two">
+						<div class="card"><span class="card-icon">{{ partial "icon" "zap" }}</span><span class="card-title">Instant rollout</span><span class="card-desc">Ship a new image in seconds with zero-downtime replicas.</span></div>
+						<div class="card"><span class="card-icon">{{ partial "icon" "lock" }}</span><span class="card-title">HTTPS by default</span><span class="card-desc">Every web service gets a managed certificate automatically.</span></div>
+						<div class="card"><span class="card-icon">{{ partial "icon" "activity" }}</span><span class="card-title">Live metrics</span><span class="card-desc">CPU, memory, and traffic charts built into the console.</span></div>
+						<div class="card"><span class="card-icon">{{ partial "icon" "key" }}</span><span class="card-title">Service accounts</span><span class="card-desc">Scoped keys and roles for people and pipelines alike.</span></div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</section>
 
-			<div class="split-media">
-				<img src="{{ (resources.Get "image/business2.webp" | resources.Fingerprint).RelPermalink }}" alt="Business">
+	<section class="section -tight">
+		<div class="container">
+			<div class="split -flip">
+				<div class="split-body">
+					<span class="u-kicker">For enterprises</span>
+					<h2 class="section-title">Isolate workloads<br>on nodes you control.</h2>
+					<p class="section-lead">Reserve dedicated capacity, or bring your own Kubernetes cluster and run Deploys on top of it.</p>
+					<div class="panel -features">
+						<div class="feature-row">
+							<span class="feature-icon">{{ partial "icon" "cpu" }}</span>
+							<div>
+								<h4>Allocated resources</h4>
+								<p>Dedicated CPU and memory reserved for your workloads, with lower per-unit pricing at scale.</p>
+							</div>
+						</div>
+						<div class="feature-row">
+							<span class="feature-icon">{{ partial "icon" "branch" }}</span>
+							<div>
+								<h4>Bring your own Kubernetes</h4>
+								<p>Run the Deploys.app agent on your own cluster and manage it from the same console.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="split-media">
+					<div class="panel -pad">
+						<span class="u-kicker">Dedicated node</span>
+						<div class="card-grid -two">
+							<div class="card -flat"><span class="card-icon">{{ partial "icon" "shield" }}</span><span class="card-title">Isolation</span><span class="card-desc">Workloads pinned to capacity that's yours alone.</span></div>
+							<div class="card -flat"><span class="card-icon">{{ partial "icon" "scale" }}</span><span class="card-title">Scale pricing</span><span class="card-desc">Lower unit rates as your committed capacity grows.</span></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="section section-regions u-grid-ink">
-	<div class="container">
-		<div class="split-grid">
-			<div class="split-media">
-				<img src="{{ (resources.Get "image/action.png" | resources.Fingerprint).RelPermalink }}" alt="Business">
-			</div>
-			<div class="region-copy">
-				<h2 class="section-heading -invert">
-					Deploy to multiple regions
-				</h2>
-				<p class="section-lead -invert">
-					Deploy your workloads across multiple regions, with additional locations coming soon.
-				</p>
-				<a class="button region-cta" href="https://console.deploys.app">Get started</a>
+	<!-- ========================== Regions ========================= -->
+	<section class="section regions u-grid-ink -ink" id="regions">
+		<div class="container">
+			<div class="regions-grid">
+				<div>
+					<span class="u-kicker -inv">Global footprint</span>
+					<h2 class="section-title">Deploy to multiple regions.</h2>
+					<p class="section-lead">Place workloads close to your users and run across locations from one project. More regions are on the way.</p>
+					<div class="region-chips">
+						<span class="region-chip">{{ partial "icon" "pin" }} gke.cluster-rcf2</span>
+						<span class="region-chip">{{ partial "icon" "pin" }} Asia&nbsp;Southeast</span>
+						<span class="region-chip -soon">{{ partial "icon" "globe" }} More soon</span>
+					</div>
+				</div>
+				<div>
+					<a class="button -primary -large" href="{{ $console }}">Get started {{ partial "icon" "arrow-right" }}</a>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="section section-plan" id="price">
-	<div class="container">
-		<div>
-			<h2 class="section-heading -center -xl">
-				Simple, usage-based pricing
-			</h2>
-			<p class="section-lead -center">
-				Pay only for what you use — no minimum commitments.<br>
-				All prices include VAT.
-			</p>
-		</div>
-		<div>
-			<div class="table-container">
-				{{$p := ((resources.GetRemote "https://api.deploys.app/billing.skus") | transform.Unmarshal).result}}
-				{{$m := mul 60 60 24 30}}
-				<table class="table -center">
+	<!-- ========================== Pricing ========================= -->
+	<section class="section" id="pricing">
+		<div class="container">
+			<div class="section-head -center">
+				<span class="u-kicker">Usage-based pricing</span>
+				<h2 class="section-title">Simple, usage-based pricing.</h2>
+				<p class="section-lead">Pay only for what you use — no minimum commitments. All prices include VAT.</p>
+			</div>
+
+			{{ $p := ((resources.GetRemote "https://api.deploys.app/billing.skus") | transform.Unmarshal).result }}
+			{{ $m := mul 60 60 24 30 }}
+			<div class="price-table-wrap">
+				<table class="price-table">
 					<thead>
-					<tr>
-						<th>RESOURCE</th>
-						<th>UNIT</th>
-						<th>PRICE</th>
-						<th>FREE TIER<br>(Daily)</th>
-					</tr>
+						<tr>
+							<th>Resource</th>
+							<th>Unit</th>
+							<th class="num">Price</th>
+							<th class="num">Free tier <span class="hide-sm">(daily)</span></th>
+						</tr>
 					</thead>
 					<tbody>
-					<tr>
-						<td><strong>CPU</strong></td>
-						<td>1s CPU time</td>
-						<td>
-							<div><strong>฿{{mul $p.cpuUsage $m | lang.FormatNumber 2}}/mo</strong></div>
-							<div>฿{{$p.cpuUsage | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
-						</td>
-						<td><strong>{{8640 | lang.FormatNumber 0}} s</strong></td>
-					</tr>
-					<tr>
-						<td><strong>Memory</strong></td>
-						<td>Shared</td>
-						<td>
-							<div><strong>Free</strong></div>
-						</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td><strong>Allocated Memory</strong></td>
-						<td>1 GiB</td>
-						<td>
-							<div><strong>฿{{mul $p.memory $m | lang.FormatNumber 2}}/mo</strong></div>
-							<div>฿{{$p.memory | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
-						</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td><strong>SSD Disk</strong></td>
-						<td>1 GiB</td>
-						<td>
-							<div><strong>฿{{mul $p.disk $m | lang.FormatNumber 2}}/mo</strong></div>
-							<div>฿{{$p.disk | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
-						</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td><strong>Replica</strong></td>
-						<td>1</td>
-						<td>
-							<div><strong>฿{{mul $p.replica $m | lang.FormatNumber 2}}/mo</strong></div>
-							<div>฿{{$p.replica | lang.FormatNumber 10 | strings.TrimRight "0"}}/s</div>
-						</td>
-						<td><strong>{{216000 | lang.FormatNumber 0}} s</strong></td>
-					</tr>
-					<tr>
-						<td><strong>Egress Bandwidth</strong></td>
-						<td>1 GiB</td>
-						<td>
-							<div><strong>฿{{$p.egress | lang.FormatNumber 2}}</strong></div>
-						</td>
-						<td>
-							<div><strong>1 GiB</strong> <span class="note">Uncached</span></div>
-							<div><strong>1 GiB</strong> <span class="note">Cached</span></div>
-						</td>
-					</tr>
-					<tr>
-						<td><strong>Registry Egress Bandwidth</strong></td>
-						<td>1 GiB</td>
-						<td>
-							<div><strong>฿{{$p.registryEgress | lang.FormatNumber 2}}</strong></div>
-						</td>
-						<td><strong>1 GiB</strong></td>
-					</tr>
-					<tr>
-						<td><strong>Dropbox Egress Bandwidth</strong></td>
-						<td>1 GiB</td>
-						<td>
-							<div><strong>฿{{$p.dropboxEgress | lang.FormatNumber 2}}</strong></div>
-						</td>
-						<td>-</td>
-					</tr>
+						<tr>
+							<td class="res">CPU</td>
+							<td>1s CPU time</td>
+							<td class="num">
+								<div class="price-main">฿{{ mul $p.cpuUsage $m | lang.FormatNumber 2 }}/mo</div>
+								<div class="price-sub">฿{{ $p.cpuUsage | lang.FormatNumber 10 | strings.TrimRight "0" }}/s</div>
+							</td>
+							<td class="num"><span class="free">{{ 8640 | lang.FormatNumber 0 }} s</span></td>
+						</tr>
+						<tr>
+							<td class="res">Memory</td>
+							<td>Shared</td>
+							<td class="num"><span class="free">Free</span></td>
+							<td class="num"><span class="note">—</span></td>
+						</tr>
+						<tr>
+							<td class="res">Allocated Memory</td>
+							<td>1 GiB</td>
+							<td class="num">
+								<div class="price-main">฿{{ mul $p.memory $m | lang.FormatNumber 2 }}/mo</div>
+								<div class="price-sub">฿{{ $p.memory | lang.FormatNumber 10 | strings.TrimRight "0" }}/s</div>
+							</td>
+							<td class="num"><span class="note">—</span></td>
+						</tr>
+						<tr>
+							<td class="res">SSD Disk</td>
+							<td>1 GiB</td>
+							<td class="num">
+								<div class="price-main">฿{{ mul $p.disk $m | lang.FormatNumber 2 }}/mo</div>
+								<div class="price-sub">฿{{ $p.disk | lang.FormatNumber 10 | strings.TrimRight "0" }}/s</div>
+							</td>
+							<td class="num"><span class="note">—</span></td>
+						</tr>
+						<tr>
+							<td class="res">Replica</td>
+							<td>1</td>
+							<td class="num">
+								<div class="price-main">฿{{ mul $p.replica $m | lang.FormatNumber 2 }}/mo</div>
+								<div class="price-sub">฿{{ $p.replica | lang.FormatNumber 10 | strings.TrimRight "0" }}/s</div>
+							</td>
+							<td class="num"><span class="free">{{ 216000 | lang.FormatNumber 0 }} s</span></td>
+						</tr>
+						<tr>
+							<td class="res">Egress Bandwidth</td>
+							<td>1 GiB</td>
+							<td class="num"><div class="price-main">฿{{ $p.egress | lang.FormatNumber 2 }}</div></td>
+							<td class="num">
+								<div><span class="free">1 GiB</span> <span class="note">uncached</span></div>
+								<div><span class="free">1 GiB</span> <span class="note">cached</span></div>
+							</td>
+						</tr>
+						<tr>
+							<td class="res">Registry Egress</td>
+							<td>1 GiB</td>
+							<td class="num"><div class="price-main">฿{{ $p.registryEgress | lang.FormatNumber 2 }}</div></td>
+							<td class="num"><span class="free">1 GiB</span></td>
+						</tr>
+						<tr>
+							<td class="res">Dropbox Egress</td>
+							<td>1 GiB</td>
+							<td class="num"><div class="price-main">฿{{ $p.dropboxEgress | lang.FormatNumber 2 }}</div></td>
+							<td class="num"><span class="note">—</span></td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
-		</div>
-	</div>
-</section>
-
-<section class="section section-cta">
-	<div class="container">
-		<div class="cta-grid">
-			<div class="cta-copy">
-				<h4 class="cta-title">
-					Start building with Deploys.app today.
-				</h4>
-				<p class="cta-sub">30-day money-back guarantee — no questions asked.</p>
-			</div>
-			<div class="cta-action">
-				<a class="button -white cta-button" href="mailto:contact@moonrhythm.io">Contact us</a>
+			<div class="price-foot">
+				<span class="u-mono">All prices in ฿ THB · VAT included</span>
+				<a class="button -ghost -small" href="{{ $docs }}/billing/" target="_blank" rel="noopener">Billing docs {{ partial "icon" "external" }}</a>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-{{end}}
+	<!-- ============================ CTA =========================== -->
+	<section class="section cta u-grid-ink -ink">
+		<div class="container">
+			<div class="cta-inner">
+				<span class="u-kicker -inv -center">Ready when you are</span>
+				<h2 class="cta-title">Start building with<br>Deploys.app today.</h2>
+				<p class="cta-sub">Spin up your first deployment in minutes. 30-day money-back guarantee — no questions asked.</p>
+				<div class="cta-actions">
+					<a class="button -primary -large" href="{{ $console }}">Open console {{ partial "icon" "arrow-right" }}</a>
+					<a class="button -ghost-inv -large" href="mailto:contact@moonrhythm.io">Contact us</a>
+				</div>
+				<p class="cta-fine">No credit card required to get started.</p>
+			</div>
+		</div>
+	</section>
+
+</main>
+{{ end }}

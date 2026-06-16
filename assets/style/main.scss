@@ -1,40 +1,10 @@
-$breakpoints: (
-	'sm': 768px,
-	'md': 1024px,
-	'lg': 1200px
-);
-
-@import 'function/breakpoint';
-
+/* Deploys.app marketing site — semantic SCSS, aligned to the console + docs
+ * design system. Import order is load-bearing: tokens → reset → base →
+ * layout → components → page styles. */
 @import 'theme';
 @import 'reset';
-@import 'fonts';
-
+@import 'base';
 @import 'layout';
-@import 'component/all';
+@import 'components';
+@import 'content';
 @import 'home';
-
-body {
-	font-family: var(--font-family-primary);
-	background-color: var(--color-base);
-	color: var(--color-content);
-	-webkit-font-smoothing: antialiased;
-}
-
-:root {
-	--navbar-height: 4.5rem;
-	--header-hight: 110px;
-}
-
-.content-wrap {
-	padding-top: var(--header-hight);
-}
-
-/* Faint "blueprint" grid texture for Ink sections — mirrors the console shell. */
-.u-grid-ink {
-	background-color: var(--color-ink);
-	background-image:
-		linear-gradient(to right, hsla(220, 40%, 92%, 0.035) 1px, transparent 1px),
-		linear-gradient(to bottom, hsla(220, 40%, 92%, 0.035) 1px, transparent 1px);
-	background-size: 44px 44px;
-}

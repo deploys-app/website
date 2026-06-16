@@ -1,0 +1,47 @@
+{{- $console := .Site.Params.consoleURL | default "https://console.deploys.app" -}}
+{{- $docs := .Site.Params.docsURL | default "https://docs.deploys.app" -}}
+{{- $github := .Site.Params.githubURL | default "https://github.com/deploys-app" -}}
+{{- $year := now.Year -}}
+<footer class="footer">
+	<div class="container">
+		<div class="footer-top">
+			<div class="footer-brand">
+				<a class="navbar-brand" href="/" aria-label="Deploys.app home">
+					<span class="mark">{{ partial "icon" "rocket" }}</span>
+					<span><b>deploys</b><span class="dim">.app</span></span>
+				</a>
+				<p class="footer-tagline">
+					A Kubernetes-based platform-as-a-service. Ship web services, workers, scheduled
+					jobs, and TCP apps without babysitting nodes or hand-rolling YAML.
+				</p>
+			</div>
+
+			<div class="footer-col">
+				<div class="footer-col-title">Product</div>
+				<a href="/#features">Features</a>
+				<a href="/#workloads">Solutions</a>
+				<a href="/#regions">Regions</a>
+				<a href="/#pricing">Pricing</a>
+			</div>
+
+			<div class="footer-col">
+				<div class="footer-col-title">Developers</div>
+				<a href="{{ $docs }}" target="_blank" rel="noopener">Documentation</a>
+				<a href="{{ $docs }}/api/" target="_blank" rel="noopener">API reference</a>
+				<a href="{{ $console }}">Console</a>
+				<a href="{{ $github }}" target="_blank" rel="noopener">GitHub</a>
+			</div>
+
+			<div class="footer-col">
+				<div class="footer-col-title">Company</div>
+				<a href="mailto:contact@moonrhythm.io">Contact</a>
+				<a href="/privacy-policy/">Privacy policy</a>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<span class="u-mono">© {{ $year }} Moon Rhythm Co., Ltd.</span>
+			<span class="u-mono">Built for developers who'd rather ship than operate clusters.</span>
+		</div>
+	</div>
+</footer>

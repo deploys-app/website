@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Deploys.app — Deploy and run containers with confidence</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Deploys.app is a Kubernetes-based platform-as-a-service for running containerized workloads in the cloud.">
-<link rel="icon" type="image/webp" href="/favicon.webp">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap">
-{{ $style := resources.Get "style/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{- $title := .Title -}}
+	{{- if .IsHome }}<title>Deploys.app — Deploy and run containers with confidence</title>
+	{{- else }}<title>{{ $title }} · Deploys.app</title>{{ end }}
+	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+	<link rel="icon" type="image/webp" href="/favicon.webp">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<script>
+		// Apply the persisted (or system) theme before first paint so the page
+		// never flashes the wrong colours. "theme-ready" enables transitions next tick.
+		(function () {
+			var t = null
+			try { t = localStorage.getItem('theme') } catch (e) {}
+			if (t !== 'light' && t !== 'dark') {
+				t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+			}
+			if (t === 'dark') document.documentElement.classList.add('dark')
+			requestAnimationFrame(function () { document.documentElement.classList.add('theme-ready') })
+		})()
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap">
+	{{- $style := resources.Get "style/main.scss" | css.Sass (dict "outputStyle" "compressed") | resources.Fingerprint -}}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	<meta property="og:title" content="{{ if .IsHome }}Deploys.app{{ else }}{{ $title }}{{ end }}">
+	<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+	<meta property="og:type" content="website">
 </head>
 <body>
-{{partial "navbar.html" .}}
-{{block "main" .}}{{end}}
+	<a class="skip-link" href="#main">Skip to content</a>
+	{{ partial "navbar.html" . }}
+	{{ block "main" . }}{{ end }}
+	{{ partial "footer.html" . }}
+	{{ partial "scripts.html" . }}
 </body>
 </html>

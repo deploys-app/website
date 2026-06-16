@@ -1,78 +1,33 @@
-<nav id="nav" class="navbar" aria-hidden="true">
-	<div class="navbar-bar container">
-		<a href="/">
-			<img src="{{ (resources.Get "image/logo.webp" | resources.Fingerprint).RelPermalink }}" height="50" alt="Deploys.app">
+{{- $console := .Site.Params.consoleURL | default "https://console.deploys.app" -}}
+{{- $docs := .Site.Params.docsURL | default "https://docs.deploys.app" -}}
+<input id="nav-toggle" type="checkbox" hidden>
+<header class="navbar">
+	<div class="navbar-inner">
+		<a class="navbar-brand" href="/" aria-label="Deploys.app home">
+			<span class="mark">{{ partial "icon" "rocket" }}</span>
+			<span><b>deploys</b><span class="dim">.app</span></span>
 		</a>
-		<div id="nav-toggle" class="navbar-toggle" tabindex="0" role="button">
-			<div class="navbar-toggle-container">
-				{{ partial "icon" "light/bars" }}
-			</div>
+
+		<div class="navbar-menu">
+			<nav class="navbar-nav" aria-label="Primary">
+				<a class="navbar-link" href="/#features">Features</a>
+				<a class="navbar-link" href="/#workloads">Solutions</a>
+				<a class="navbar-link" href="/#regions">Regions</a>
+				<a class="navbar-link" href="/#pricing">Pricing</a>
+				<a class="navbar-link" href="{{ $docs }}" target="_blank" rel="noopener">Docs {{ partial "icon" "external" }}</a>
+			</nav>
+			<a class="button -primary -block m-cta" href="{{ $console }}">Open console</a>
 		</div>
-		<div id="nav-menu-container" class="navbar-menu-container">
-			<ul class="navbar-menus">
-				<li class="navbar-menu">
-					<a class="nav-link" href="/">Home</a>
-				</li>
-				<li class="navbar-menu">
-					<a class="nav-link" href="/#feature">Features</a>
-				</li>
-				<li class="navbar-menu">
-					<a class="nav-link" href="/#price">Prices</a>
-				</li>
-				<li class="navbar-menu">
-					<a class="nav-link" href="/privacy-policy">Privacy</a>
-				</li>
-				<li class="navbar-menu">
-					<div class="navbar-cta">
-						<a class="button -small" href="https://console.deploys.app">Console</a>
-					</div>
-				</li>
-			</ul>
+
+		<div class="navbar-spacer"></div>
+
+		<div class="navbar-actions">
+			<button class="navbar-theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+				{{ partial "icon" "sun" }}
+				{{ partial "icon" "moon" }}
+			</button>
+			<a class="button -primary -desktop" href="{{ $console }}">Open console {{ partial "icon" "arrow-right" }}</a>
+			<label class="navbar-burger" for="nav-toggle" aria-label="Toggle navigation">{{ partial "icon" "menu" }}</label>
 		</div>
 	</div>
-</nav>
-
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const nav = document.getElementById('nav')
-		const toggle = document.getElementById('nav-toggle')
-		const container = document.getElementById('nav-menu-container')
-
-		toggle.addEventListener('click', () => {
-			container.classList.toggle('active')
-		})
-
-		container.querySelectorAll('.nav-link, .navbar-cta a').forEach((link) => {
-			link.addEventListener('click', () => {
-				container.classList.remove('active')
-			})
-		})
-
-		let fixed = false
-		let scrolling = false
-		
-		const onScroll = () => {
-			scrolling = false
-			fixed = window.scrollY > 100
-
-			container.classList.remove('active')
-			
-			if (fixed) {
-				nav.classList.add('navbar-fixed')
-			} else {
-				nav.classList.remove('navbar-fixed')
-			}
-		}
-		
-		const handleScroll = () => {
-			if (scrolling) return
-			
-			scrolling = true
-			setTimeout(onScroll, 150)
-		}
-
-		window.addEventListener('scroll', handleScroll)
-
-		handleScroll()
-	})
-</script>
+</header>

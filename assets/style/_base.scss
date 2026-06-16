@@ -1,0 +1,88 @@
+/* =========================================================================
+ * Base — global typography + shared utilities.
+ * ========================================================================= */
+body {
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-400);
+	font-weight: var(--font-weight-default);
+	line-height: var(--line-height-paragraph);
+	color: var(--color-content);
+	background-color: var(--color-base);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-family-primary);
+	font-weight: var(--font-weight-heading);
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	color: var(--color-content);
+}
+
+::selection {
+	background: hsla(335, 80%, 53%, 0.22);
+}
+
+/* ---- Layout container ---- */
+.container {
+	width: 100%;
+	max-width: var(--container-max);
+	margin: 0 auto;
+	padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* ---- Blueprint grid texture — the console/docs signature, on Ink surfaces ---- */
+.u-grid-ink {
+	background-color: var(--color-ink);
+	background-image:
+		linear-gradient(to right, hsla(220, 40%, 92%, 0.04) 1px, transparent 1px),
+		linear-gradient(to bottom, hsla(220, 40%, 92%, 0.04) 1px, transparent 1px);
+	background-size: 44px 44px;
+}
+
+/* ---- Mono "machine label" — section kickers, eyebrows, metadata ---- */
+.u-kicker {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-200);
+	font-weight: var(--font-weight-medium);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--color-primary-600);
+}
+.u-kicker::before {
+	content: '';
+	width: 1.6rem;
+	height: 1px;
+	background: var(--color-primary-500);
+}
+.u-kicker.-inv { color: var(--color-primary-400); }
+.u-kicker.-center { justify-content: center; }
+
+.u-signal { color: var(--color-primary-500); }
+.u-mono { font-family: var(--font-family-mono); }
+
+/* ---- Inline line icon ---- */
+.icon {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	vertical-align: -0.125em;
+	flex: none;
+}
+
+/* ---- Skip link ---- */
+.skip-link {
+	position: absolute;
+	left: -999px;
+	top: 0.5rem;
+	z-index: 100;
+	background: var(--color-primary-600);
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border-radius: var(--radius-sm);
+}
+.skip-link:focus { left: 0.5rem; }
