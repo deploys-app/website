@@ -1,0 +1,58 @@
+{{- /* Pure-CSS faux console dashboard — the homepage's signature element. */ -}}
+<div class="shot" aria-hidden="true">
+	<div class="shot-frame">
+		<div class="shot-chrome">
+			<div class="shot-dots"><i></i><i></i><i></i></div>
+			<div class="shot-url">console.deploys.app/?project=acme</div>
+		</div>
+		<div class="mock">
+			<aside class="mock-rail">
+				<div class="mock-rail-label">acme</div>
+				<div class="mock-nav -active">{{ partial "icon" "layers" }} Deployments</div>
+				<div class="mock-nav">{{ partial "icon" "route" }} Routes</div>
+				<div class="mock-nav">{{ partial "icon" "globe" }} Domains</div>
+				<div class="mock-nav">{{ partial "icon" "disk" }} Disks</div>
+				<div class="mock-nav">{{ partial "icon" "activity" }} Metrics</div>
+				<div class="mock-nav">{{ partial "icon" "container" }} Registry</div>
+			</aside>
+			<div class="mock-main">
+				<div class="mock-head">
+					<h5>Deployments</h5>
+					<span class="mock-cta">+ Deploy</span>
+				</div>
+				<div class="mock-stats">
+					<div class="mock-stat"><div class="k">Running</div><div class="v">12</div></div>
+					<div class="mock-stat"><div class="k">CPU</div><div class="v">0.8<span class="u">&nbsp;vCPU</span></div></div>
+					<div class="mock-stat"><div class="k">Egress</div><div class="v">42<span class="u">&nbsp;GiB</span></div></div>
+				</div>
+				<div class="mock-table">
+					<div class="mock-row -head"><span>Name</span><span>Type</span><span>Status</span><span></span></div>
+					<div class="mock-row">
+						<span class="mock-name">{{ partial "icon" "globe" }}<span>web</span></span>
+						<span class="mock-type">web</span>
+						<span class="status-pill -positive">live</span>
+						<svg class="mock-spark" viewBox="0 0 40 12" fill="none" preserveAspectRatio="none"><polyline points="0,9 6,7 12,8 18,4 24,5 30,2 40,3" stroke="hsl(335,85%,64%)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+					<div class="mock-row">
+						<span class="mock-name">{{ partial "icon" "cog" }}<span>worker</span></span>
+						<span class="mock-type">worker</span>
+						<span class="status-pill -positive">live</span>
+						<svg class="mock-spark" viewBox="0 0 40 12" fill="none" preserveAspectRatio="none"><polyline points="0,6 6,7 12,5 18,6 24,4 30,6 40,5" stroke="hsl(335,85%,64%)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+					<div class="mock-row">
+						<span class="mock-name">{{ partial "icon" "clock" }}<span>nightly-sync</span></span>
+						<span class="mock-type">cron</span>
+						<span class="status-pill -info">queued</span>
+						<svg class="mock-spark" viewBox="0 0 40 12" fill="none" preserveAspectRatio="none"><polyline points="0,8 8,8 8,3 16,3 16,8 24,8 24,4 32,4 32,8 40,8" stroke="hsl(189,80%,60%)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+					<div class="mock-row">
+						<span class="mock-name">{{ partial "icon" "network" }}<span>db-proxy</span></span>
+						<span class="mock-type">tcp</span>
+						<span class="status-pill -warning">deploying</span>
+						<svg class="mock-spark" viewBox="0 0 40 12" fill="none" preserveAspectRatio="none"><polyline points="0,7 6,5 12,6 18,5 24,7 30,4 40,6" stroke="hsl(335,85%,64%)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

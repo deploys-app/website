@@ -1,0 +1,35 @@
+<script>
+// Theme toggle. Initial theme is applied by the inline script in <head>;
+// this binds the button and reacts to OS changes until the user chooses.
+(function () {
+	var html = document.documentElement
+	var btn = document.querySelector('[data-theme-toggle]')
+	if (!btn) return
+	function read () { try { return localStorage.getItem('theme') } catch (e) { return null } }
+	function write (v) { try { localStorage.setItem('theme', v) } catch (e) {} }
+	function apply (theme) { html.classList.toggle('dark', theme === 'dark') }
+	btn.addEventListener('click', function () {
+		var next = html.classList.contains('dark') ? 'light' : 'dark'
+		apply(next)
+		write(next)
+	})
+	var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
+	if (mq && mq.addEventListener) {
+		mq.addEventListener('change', function (e) { if (!read()) apply(e.matches ? 'dark' : 'light') })
+	}
+})()
+</script>
+
+<script>
+// Mobile nav: close the menu after tapping a link, and on resize to desktop.
+(function () {
+	var toggle = document.getElementById('nav-toggle')
+	if (!toggle) return
+	document.querySelectorAll('.navbar-menu a').forEach(function (a) {
+		a.addEventListener('click', function () { toggle.checked = false })
+	})
+	window.addEventListener('resize', function () {
+		if (window.innerWidth > 880) toggle.checked = false
+	})
+})()
+</script>

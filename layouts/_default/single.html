@@ -1,70 +1,19 @@
-{{define "main"}}
-<section class="section single-hero u-grid-ink">
-    <div class="container">
-        <h1>{{.Params.header}}</h1>
-    </div>
-</section>
+{{ define "main" }}
+<main id="main">
+	<section class="page-hero u-grid-ink">
+		<div class="container">
+			<span class="u-kicker -inv">Legal</span>
+			<h1>{{ with .Params.header }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
+			{{ with .Description }}<p>{{ . }}</p>{{ end }}
+		</div>
+	</section>
 
-<section class="section single-content">
-    <div class="container">
-        <div class="single-content-body">
-            {{.Content}}
-        </div>
-    </div>
-</section>
-
-<style>
-    .single-hero {
-        padding: 128px 0 48px;
-    }
-
-    .single-hero h1 {
-        font-weight: 700;
-        font-size: 2.5rem;
-        color: #fff;
-    }
-
-    .single-content {
-        padding: 56px 0 96px;
-    }
-
-    .single-content-body {
-        max-width: 760px;
-        color: var(--color-content);
-    }
-
-    .single-content-body h2 {
-        font-size: var(--font-size-800);
-        margin: 2rem 0 0.75rem;
-        color: var(--color-content);
-    }
-
-    .single-content-body h3 {
-        font-size: var(--font-size-600);
-        margin: 1.5rem 0 0.5rem;
-        color: var(--color-content);
-    }
-
-    .single-content-body p {
-        margin-bottom: 1rem;
-        color: var(--color-content-muted);
-        line-height: var(--line-height-paragraph);
-    }
-
-    .single-content-body ul {
-        list-style: disc;
-        padding-left: 1.25rem;
-        margin-bottom: 1rem;
-        color: var(--color-content-muted);
-    }
-
-    .single-content-body li {
-        margin-bottom: 0.35rem;
-    }
-
-    .single-content-body a {
-        color: var(--color-primary-600);
-        text-decoration: underline;
-    }
-</style>
-{{end}}
+	<section class="section">
+		<div class="container">
+			<article class="prose">
+				{{ .Content }}
+			</article>
+		</div>
+	</section>
+</main>
+{{ end }}

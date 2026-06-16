@@ -5,3 +5,9 @@ disableKinds:
 - taxonomy
 ignoreErrors:
 - error-disable-taxonomy
+
+params:
+  description: 'Deploys.app is a Kubernetes-based platform-as-a-service for running containerized workloads in the cloud — web services, workers, cron jobs, and TCP apps.'
+  consoleURL: 'https://console.deploys.app'
+  docsURL: 'https://docs.deploys.app'
+  githubURL: 'https://github.com/deploys-app'
