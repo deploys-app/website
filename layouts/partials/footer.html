@@ -6,10 +6,7 @@
 	<div class="container">
 		<div class="footer-top">
 			<div class="footer-brand">
-				<a class="navbar-brand" href="/" aria-label="Deploys.app home">
-					<span class="mark">{{ partial "icon" "rocket" }}</span>
-					<span><b>deploys</b><span class="dim">.app</span></span>
-				</a>
+				{{ partial "brand.html" . }}
 				<p class="footer-tagline">
 					A Kubernetes-based platform-as-a-service. Ship web services, workers, scheduled
 					jobs, and TCP apps without babysitting nodes or hand-rolling YAML.

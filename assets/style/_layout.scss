@@ -33,17 +33,12 @@
 	letter-spacing: -0.02em;
 	color: var(--color-content-inv);
 }
-.navbar-brand .mark {
-	width: 1.7rem;
-	height: 1.7rem;
-	display: grid;
-	place-items: center;
-	border-radius: var(--radius-sm);
-	background: linear-gradient(150deg, var(--color-primary-500), var(--color-primary-700));
-	box-shadow: var(--shadow-glow);
-	color: #fff;
+.navbar-brand .brand-logo {
+	width: 1.9rem;
+	height: 1.9rem;
+	display: block;
 }
-.navbar-brand .mark .icon { width: 1rem; height: 1rem; }
+.navbar-brand picture { display: inline-flex; }
 .navbar-brand b { font-weight: var(--font-weight-heading); }
 .navbar-brand .dim { color: var(--color-content-inv-faint); font-weight: var(--font-weight-default); }
 
