@@ -86,3 +86,21 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: var(--radius-sm);
 }
 .skip-link:focus { left: 0.5rem; }
+
+/* ---- Page-change animation (cross-document view transitions) ----
+ * Same-origin page loads crossfade instead of flashing white
+ * (Chrome 126+ / Safari 18.2+; other browsers keep the instant swap).
+ * The navbar carries its own snapshot (_layout.scss) so it stays put.
+ * group(*) included: its geometry animation would otherwise run at the
+ * UA default 250ms and hold the transition open after the fades end. */
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
+
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation-duration: var(--timing-fast);
+	}
+}
